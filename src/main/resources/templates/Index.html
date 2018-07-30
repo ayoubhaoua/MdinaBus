@@ -2,7 +2,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>mdina bus</title>
-
 	<link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css.css"/>
 
@@ -67,8 +66,9 @@
 				<td th:text="${entite.adresse}">adress</td> 
 				<td th:text="${entite.type}">type</td>
 				<td class="center">
-				<button th:id="${entite.id}" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+				<button type="button" class="btn btn-primary buttSup" data-toggle="modal" data-target="#exampleModalCenter">
 	  			supprimer
+	  			<div class="id" th:text="${entite.id}" ></div>
 				</button></td>
 			</tr>
         </tbody>
@@ -76,7 +76,11 @@
     </div>
     </div>
 <script type="text/javascript">
-
+$(".buttSup").click(function(){
+	id=$(this).find(".id").html();
+	href="supprimer?id="+id
+	$("#exampleModalCenter a[type=submit]").prop("href",href);
+})
 </script>
 
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -88,13 +92,12 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <script type="text/javascript">
-        </script>
+      <div class="modal-body" style="color: red">
+      vous voulez vraiment supprimer cette entite ?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">supprimer</button>
+        <a type="submit" class="btn btn-primary" href="">supprimer</a>
       </div>
     </div>
   </div>
