@@ -80,10 +80,6 @@ $(".buttSup").click(function(){
 	id=$(this).find(".id").html();
 	href="supprimer?id="+id;
 	$("#exampleModalCenter a[type=submit]").prop("href",href);
-$("#ButtonAj").click(function(){
-	html="";
-	$("#modalBody").html()=html;
-})
 })
 </script>
 
@@ -118,13 +114,20 @@ $("#ButtonAj").click(function(){
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form action="#" th:action="@{/entites}" th:object="${entite}" method="post">
       <div class="modal-body">
-        ...
+        nom:        <input class="form-control form-control-lg" type="text" placeholder="nom" th:field="*{nom}" />
+        adresse:    <input class="form-control form-control-lg" type="text" placeholder="adresse" th:field="*{adresse}" />
+        type:       <select class="form-control" th:field="*{type}">
+				      <option value="ecole">ecole</option>
+				      <option value="association">association</option>
+				    </select>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">ajouter</button>
       </div>
+      </form>
     </div>
   </div>
 </div>

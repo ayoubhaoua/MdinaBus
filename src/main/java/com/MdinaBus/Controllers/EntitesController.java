@@ -37,13 +37,13 @@ public class EntitesController {
 	@PostMapping("/entites")
     public String greetingSubmit(@ModelAttribute Entite entite ) {
 		repo.save(entite);
-        return "Index";
+        return "redirect:entites";
     }
 	
    @GetMapping("/supprimer")
 	public String supprimer(long id) {
 		repo.deleteById(id);
-		return "Index";
+		return "redirect:entites";
 	}
 	
 	@GetMapping("/save")
