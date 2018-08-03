@@ -37,7 +37,7 @@ public class Pt_ramassage  {
 
 
 	public Pt_ramassage(String adresse, Date heure_arrivee, int decalage, int nbr_eleves, String id_circuit,
-			String autre) {
+			String autre, Point geometrie) {
 		super();
 		this.adresse = adresse;
 		this.heure_arrivee = heure_arrivee;
@@ -45,6 +45,19 @@ public class Pt_ramassage  {
 		this.nbr_eleves = nbr_eleves;
 		this.id_circuit = id_circuit;
 		this.autre = autre;
+		this.geometrie = geometrie;
+	}
+
+
+
+	public String getId() {
+		return id;
+	}
+
+
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 
@@ -118,6 +131,20 @@ public class Pt_ramassage  {
 	public void setAutre(String autre) {
 		this.autre = autre;
 	}
- 
+
+
+
+	public Point getGeometrie() {
+		return geometrie;
+	}
+
+
+
+	public void setGeometrie(Point geometrie) {
+		this.geometrie = geometrie;
+	}
+
+
+       
 	
 }

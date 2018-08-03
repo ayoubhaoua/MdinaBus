@@ -25,6 +25,7 @@ public class Circuit  {
 	@GeneratedValue
 	private String id;
     private double kilometrage_circuit;
+    private double km_HLP;
     private Date heure_depart;
     private Date heure_arrivee;
     private Date date;
@@ -40,18 +41,31 @@ public class Circuit  {
 
 
 
-
-	public Circuit(double kilometrage_circuit, Date heure_depart, Date heure_arrivee, Date date, String id_contrat,
-			String autre) {
+	public Circuit(String id, double kilometrage_circuit, double km_HLP, Date heure_depart, Date heure_arrivee,
+			Date date, String id_contrat, String autre, LineString geometrie) {
 		super();
+		this.id = id;
 		this.kilometrage_circuit = kilometrage_circuit;
+		this.km_HLP = km_HLP;
 		this.heure_depart = heure_depart;
 		this.heure_arrivee = heure_arrivee;
 		this.date = date;
 		this.id_contrat = id_contrat;
 		this.autre = autre;
+		this.geometrie = geometrie;
 	}
 
+
+
+	public String getId() {
+		return id;
+	}
+
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 
 
@@ -61,11 +75,21 @@ public class Circuit  {
 
 
 
-
 	public void setKilometrage_circuit(double kilometrage_circuit) {
 		this.kilometrage_circuit = kilometrage_circuit;
 	}
 
+
+
+	public double getKm_HLP() {
+		return km_HLP;
+	}
+
+
+
+	public void setKm_HLP(double km_HLP) {
+		this.km_HLP = km_HLP;
+	}
 
 
 
@@ -75,11 +99,9 @@ public class Circuit  {
 
 
 
-
 	public void setHeure_depart(Date heure_depart) {
 		this.heure_depart = heure_depart;
 	}
-
 
 
 
@@ -89,11 +111,9 @@ public class Circuit  {
 
 
 
-
 	public void setHeure_arrivee(Date heure_arrivee) {
 		this.heure_arrivee = heure_arrivee;
 	}
-
 
 
 
@@ -103,11 +123,9 @@ public class Circuit  {
 
 
 
-
 	public void setDate(Date date) {
 		this.date = date;
 	}
-
 
 
 
@@ -117,11 +135,9 @@ public class Circuit  {
 
 
 
-
 	public void setId_contrat(String id_contrat) {
 		this.id_contrat = id_contrat;
 	}
-
 
 
 
@@ -131,15 +147,21 @@ public class Circuit  {
 
 
 
-
 	public void setAutre(String autre) {
 		this.autre = autre;
 	}
-	
 
 
 
-	
+	public LineString getGeometrie() {
+		return geometrie;
+	}
+
+
+
+	public void setGeometrie(LineString geometrie) {
+		this.geometrie = geometrie;
+	}
 
 
 
