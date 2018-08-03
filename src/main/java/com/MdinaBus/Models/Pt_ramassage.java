@@ -3,10 +3,14 @@ package com.MdinaBus.Models;
 
 
 import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.vividsolutions.jts.geom.Point;
 
 @Entity
 @Table(name = "pt_ramassage")
@@ -22,6 +26,8 @@ public class Pt_ramassage  {
 	private int nbr_eleves;
 	private String id_circuit;
 	private String autre;
+	@Column(name="geometrie", columnDefinition="geometry")
+	private Point geometrie; 
 	
 	
  

@@ -6,10 +6,15 @@ package com.MdinaBus.Models;
 
 
 import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.vividsolutions.jts.geom.LineString;
+import com.vividsolutions.jts.geom.Point;
 
 @Entity
 @Table(name = "circuit")
@@ -25,7 +30,8 @@ public class Circuit  {
     private Date date;
     private String id_contrat;
     private String autre;
-  
+    @Column(name="geometrie", columnDefinition="geometry")
+	private LineString geometrie; 
     
     
  
