@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <title>Draw Feature Example</title>
+        <title>Ajouter geometrie</title>
         
         <link rel="stylesheet" href="../static/style.css" type="text/css">
         <link rel="stylesheet" href="../static/styles.css" type="text/css">
@@ -48,10 +48,13 @@
 
 
                 for(var key in drawControls) {
-                     drawControls[key].events.register('featureadded', drawControls[key], function(evt) {
+                     
+                	
+      drawControls[key].events.register('featureadded', drawControls[key], function(evt) {
             // Here, you should see the geometry of the drawn feature in your console.
             var geom = evt.feature.geometry;
                         console.log(geom);
+                        
            
                 
            
@@ -88,14 +91,16 @@
         </script>
     </head>
     <body onload="init()">
-        <h1 id="title">OpenLayers 2 Draw Feature Example</h1>
+        <h1 id="title">Ajout point ramassage / circuit</h1>
 
-        <div id="tags">
+        <!--  <div id="tags">
             point, line, linestring, polygon, box, digitizing, geometry, draw, drag
-        </div>
+        </div>  -->
 
         
-
+<div class="container">
+  <div class="row">
+    <div class="col-6">
         <div id="map" class="smallmap"></div>
     
         <ul id="controlToggle">
@@ -106,16 +111,16 @@
             </li>
             <li>
                 <input type="radio" name="type" value="point" id="pointToggle" onclick="toggleControl(this);" />
-                <label for="pointToggle">draw point</label>
+                <label for="pointToggle">ajouter point de ramassage</label>
             </li>
             <li>
                 <input type="radio" name="type" value="line" id="lineToggle" onclick="toggleControl(this);" />
-                <label for="lineToggle">draw line</label>
+                <label for="lineToggle">ajouter circuit</label>
             </li>
-            <li>
+           <!--   <li>
                 <input type="radio" name="type" value="polygon" id="polygonToggle" onclick="toggleControl(this);" />
                 <label for="polygonToggle">draw polygon</label>
-            </li>
+            </li> 
             <li>
                 <input type="radio" name="type" value="box" id="boxToggle" onclick="toggleControl(this);" />
                 <label for="boxToggle">draw box</label>
@@ -123,8 +128,11 @@
             <li>
                 <input type="checkbox" name="allow-pan" value="allow-pan" id="allowPanCheckbox" checked=true onclick="allowPan(this);" />
                 <label for="allowPanCheckbox">allow pan while drawing</label>
-            </li>
+            </li> -->
         </ul>
+        </div>
+        </div>
+        </div>
 
         
     </body>
