@@ -20,6 +20,7 @@ public class Pt_ramassage  {
 	@Id
 	@GeneratedValue
 	private String id;
+	private String nom;
 	private String adresse ;
 	private Date heure_arrivee;
 	private int decalage;
@@ -36,9 +37,12 @@ public class Pt_ramassage  {
 
 
 
-	public Pt_ramassage(String adresse, Date heure_arrivee, int decalage, int nbr_eleves, String id_circuit,
-			String autre, Point geometrie) {
+
+	public Pt_ramassage(String id, String nom, String adresse, Date heure_arrivee, int decalage, int nbr_eleves,
+			String id_circuit, String autre, Point geometrie) {
 		super();
+		this.id = id;
+		this.nom = nom;
 		this.adresse = adresse;
 		this.heure_arrivee = heure_arrivee;
 		this.decalage = decalage;
@@ -47,6 +51,24 @@ public class Pt_ramassage  {
 		this.autre = autre;
 		this.geometrie = geometrie;
 	}
+
+
+
+
+
+
+
+	public String getNom() {
+		return nom;
+	}
+
+
+
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
 
 
 
