@@ -2,7 +2,8 @@ package com.MdinaBus.Models;
 
 
 
-import java.util.Date;
+
+import java.sql.Time;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +11,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.vividsolutions.jts.geom.Point;
+
+
+
 
 @Entity
 @Table(name = "pt_ramassage")
@@ -19,27 +22,28 @@ public class Pt_ramassage  {
 	
 	@Id
 	@GeneratedValue
-	private String id;
+	@Column(columnDefinition="SERIAL")
+	private long id;
 	private String nom;
-	private String adresse ;
-	private Date heure_arrivee;
-	private int decalage;
+	//private String adresse ;
+	private Time heure_arrivee;
+	/*private int decalage;
 	private int nbr_eleves;
 	private String id_circuit;
-	private String autre;
+	private String autre;*/
 	@Column(name="geometrie", columnDefinition="geometry")
-	private Point geometrie; 
+	private String geometrie; 
 	
 	
  
-	protected Pt_ramassage() {
+	public Pt_ramassage() {
 	}
 
+	
+/*
 
-
-
-	public Pt_ramassage(String id, String nom, String adresse, Date heure_arrivee, int decalage, int nbr_eleves,
-			String id_circuit, String autre, Point geometrie) {
+	public Pt_ramassage(String id, String nom, String adresse, Time heure_arrivee, int decalage, int nbr_eleves,
+			String id_circuit, String autre, String geometrie) {
 		super();
 		this.id = id;
 		this.nom = nom;
@@ -52,10 +56,19 @@ public class Pt_ramassage  {
 		this.geometrie = geometrie;
 	}
 
+*/
 
 
 
 
+
+	public Pt_ramassage(String nom, Time heure_arrivee ,String geometrie) {
+		super();
+
+		this.nom = nom;
+		this.heure_arrivee=heure_arrivee;
+		this.geometrie = geometrie;
+	}
 
 
 	public String getNom() {
@@ -72,18 +85,18 @@ public class Pt_ramassage  {
 
 
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
 
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
 
-
+/*
 	public String getAdresse() {
 		return adresse;
 	}
@@ -94,20 +107,20 @@ public class Pt_ramassage  {
 		this.adresse = adresse;
 	}
 
+*/
 
-
-	public Date getHeure_arrivee() {
+	public Time getHeure_arrivee() {
 		return heure_arrivee;
 	}
 
 
 
-	public void setHeure_arrivee(Date heure_arrivee) {
+	public void setHeure_arrivee(Time heure_arrivee) {
 		this.heure_arrivee = heure_arrivee;
 	}
 
 
-
+/*
 	public int getDecalage() {
 		return decalage;
 	}
@@ -154,19 +167,18 @@ public class Pt_ramassage  {
 		this.autre = autre;
 	}
 
+*/
 
-
-	public Point getGeometrie() {
+	public String getGeometrie() {
 		return geometrie;
 	}
 
 
 
-	public void setGeometrie(Point geometrie) {
+	public void setGeometrie(String geometrie) {
 		this.geometrie = geometrie;
 	}
 
-
-       
+	
 	
 }

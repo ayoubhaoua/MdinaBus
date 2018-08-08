@@ -32,7 +32,7 @@ public class EntitesController {
 		return "Index";
 	}
 	
-	@PostMapping("/save")
+	@PostMapping("/entites/save")
     public String save( Entite entite ) {
 		repo.save(entite);
         return "redirect:entites";

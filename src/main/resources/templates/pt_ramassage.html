@@ -3,20 +3,19 @@
 <head>
 
 <meta charset="utf-8"/>
-<link rel="stylesheet" href="style.css" type="text/css"/>
-<link rel="stylesheet" href="styles.css" type="text/css"/>
-<link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="css.css"/>
+<link rel="stylesheet" href="../static/bootstrap/bootstrap.min.css" th:href=@{/bootstrap/bootstrap.min.css}/>
+<link rel="stylesheet" href="../static/style.css" type="text/css" th:href=@{/style.css}/>
+<link rel="stylesheet" type="text/css" href="../static/css.css" th:href=@{/css.css}/>
+<link rel="stylesheet" href="../static/dataTables/dataTables.bootstrap4.min.css" th:href=@{/dataTables/dataTables.bootstrap4.min.css}/>
 
 
 <script src="bootstrap/jquery-3.1.1.slim.min.js" ></script>
 <script src="bootstrap/tether.min.js"></script>
 <script src="bootstrap/bootstrap.min.js"></script>
-<script src="dataTables/dataTables.bootstrap4.min.css"></script>
-<script type="text/javascript" src="dataTables/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="dataTables/dataTables.bootstrap4.min.js"></script>
+<script src="dataTables/jquery.dataTables.min.js"></script>
+<script src="dataTables/dataTables.bootstrap4.min.js"></script>
 <script src="openlayers.js"></script>
-<script type="text/javascript" src="pt_ramassage.js"></script>
+<script src="pt_ramassage.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -76,11 +75,10 @@
 	  			<div class="id" th:text="${point.id}" style="display: none"></div>
 				</button>
 				<button type="button" class="btn btn-primary buttEd" data-toggle="modal" data-target="#exampleModalLong">
-	  			edite
+	  			editer
 	  			<div class="id" th:text="${point.id}" style="display: none"></div>
 	  			<div class="nom" th:text="${point.nom}" style="display: none"></div>
 	  			<div class="heure_arrivee" th:text="${point.heure_arrivee}" style="display: none"></div>
-	  			<div class="type" th:text="${point.type}" style="display: none"></div>
 				</button>
 				</td>
 			</tr>
@@ -105,17 +103,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form action="#" th:action="@{/savept}" th:object="${point}" method="post">
       <div class="modal-body">
-      hhhhhhhhh
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">ajouter</button>
-      </div>
-      <!--  
-      <form action="#" th:action="@{/save}" th:object="${entite}" method="post">
-      <div class="modal-body">
-        <input  id="id" style="display: none" class="form-control form-control-lg" type="text" placeholder="nom" th:field="*{id}" disabled="disabled"/>
+        <input  id="geometry" style="display: none"  type="text" th:field="*{geometrie}"/>
         nom:        <input id="nom" class="form-control form-control-lg" type="text" placeholder="nom" th:field="*{nom}" />
         heure:      <input id="heure_arrivee" class="form-control form-control-lg" type="text" placeholder="heure_arrivee" th:field="*{heure_arrivee}" />
       </div>
@@ -123,10 +113,17 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">ajouter</button>
       </div>
-      </form>-->
+      </form>
     </div>
   </div>
 </div>
     </div>
+   
+   
+   <script type="text/javascript">
+	$(document).ready(function() {
+    $('#points').DataTable();
+} );
+</script>
 </body>
 </html>

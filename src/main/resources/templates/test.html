@@ -3,15 +3,15 @@
 <head>
 	<title>mdina bus</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css.css"/>
-	<link rel="stylesheet" type="text/css" href="dataTables/dataTables.bootstrap4.min.css"/>
+	<link rel="stylesheet" href="../static/bootstrap/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/dataTables/dataTables.bootstrap4.min.css"/>
 	
-	<script src="bootstrap/jquery-3.1.1.slim.min.js" ></script>
-	<script src="bootstrap/tether.min.js"></script>
-	<script src="bootstrap/bootstrap.min.js"></script>
-	<script type="text/javascript" src="dataTables/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src="dataTables/dataTables.bootstrap4.min.js"></script>
+	<script src="../static/bootstrap/jquery-3.1.1.slim.min.js" ></script>
+	<script src="../static/bootstrap/tether.min.js"></script>
+	<script src="../static/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../static/dataTables/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../static/dataTables/dataTables.bootstrap4.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -72,13 +72,12 @@
 	  			<div class="id" th:text="${entite.id}" style="display: none"></div>
 				</button>
 				<button type="button" class="btn btn-primary buttEd" data-toggle="modal" data-target="#exampleModalLong">
-	  			editer
+	  			edite
 	  			<div class="id" th:text="${entite.id}" style="display: none"></div>
 	  			<div class="nom" th:text="${entite.nom}" style="display: none"></div>
 	  			<div class="adresse" th:text="${entite.adresse}" style="display: none"></div>
 	  			<div class="type" th:text="${entite.type}" style="display: none"></div>
 				</button>
-				<a th:href="@{'/circuit?ide='+ ${entite.id}}"><button type="button" class="btn btn-primary"> circuits </button></a>
 				</td>
 			</tr>
         </tbody>
