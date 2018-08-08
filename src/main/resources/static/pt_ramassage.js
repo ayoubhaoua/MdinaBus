@@ -1,6 +1,4 @@
 var map, drawControls;
-var x;
-var y;
 
             function init(){
                 map = new OpenLayers.Map('map');
@@ -19,19 +17,19 @@ var y;
 
                  drawControls.events.register('featureadded', drawControls, function(evt) {
                  var geom = evt.feature.geometry;
-                        x=geom.x;
-                        y=geom.y;
-                        $('#exampleModalLongTitle').modal();
+                        $('#geometry').val("POINT("+geom.x+" "+geom.y+")");
+                        $('#exampleModalLong').modal();
+                        
                 });
 
                     map.addControl(drawControls);
+                    map.setCenter(new OpenLayers.LonLat(0, 0), 3);
+                    
+                    $("#ajouter").click(function() {
+                        drawControls.activate();
+                       });
                     
             }
+        
             
-            //$("#ajouter").click(function() {
-            drawControls.activate();
-           // });
-            
-            
-
             
