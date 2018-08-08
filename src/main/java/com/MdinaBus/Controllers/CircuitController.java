@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.MdinaBus.Models.Circuit;
 import com.MdinaBus.Models.Entite;
+import com.MdinaBus.Repositories.CircuitDaoImpl;
 import com.MdinaBus.Repositories.CircuitsRepo;
 import com.MdinaBus.Repositories.EntitesRepo;
 
@@ -17,6 +18,7 @@ public class CircuitController {
 	CircuitsRepo repo;
 	
 	@Autowired
+	CircuitDaoImpl dao;
 	
 	
 	@GetMapping("/circuits")

@@ -5,6 +5,7 @@ package com.MdinaBus.Models;
 
 
 
+import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -14,7 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.vividsolutions.jts.geom.LineString;
-import com.vividsolutions.jts.geom.Point;
+
 
 @Entity
 @Table(name = "circuit")
@@ -24,15 +25,16 @@ public class Circuit  {
 	@Id
 	@GeneratedValue
 	private String id;
+	private String nom;
     private double kilometrage_circuit;
     private double km_HLP;
-    private Date heure_depart;
-    private Date heure_arrivee;
+    private Time heure_depart;
+    private Time heure_arrivee;
     private Date date;
-    private String id_contrat;
+    private long id_contrat;
     private String autre;
     @Column(name="geometrie", columnDefinition="geometry")
-	private LineString geometrie; 
+	private String geometrie; 
     
     
  
@@ -41,10 +43,10 @@ public class Circuit  {
 
 
 
-	public Circuit(String id, double kilometrage_circuit, double km_HLP, Date heure_depart, Date heure_arrivee,
-			Date date, String id_contrat, String autre, LineString geometrie) {
+	public Circuit(String nom, double kilometrage_circuit, double km_HLP, Time heure_depart, Time heure_arrivee,
+			Date date, long id_contrat, String autre, String geometrie) {
 		super();
-		this.id = id;
+		this.nom = nom;
 		this.kilometrage_circuit = kilometrage_circuit;
 		this.km_HLP = km_HLP;
 		this.heure_depart = heure_depart;
@@ -57,14 +59,14 @@ public class Circuit  {
 
 
 
-	public String getId() {
-		return id;
+	public String getNom() {
+		return nom;
 	}
 
 
 
-	public void setId(String id) {
-		this.id = id;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 
 
@@ -93,25 +95,25 @@ public class Circuit  {
 
 
 
-	public Date getHeure_depart() {
+	public Time getHeure_depart() {
 		return heure_depart;
 	}
 
 
 
-	public void setHeure_depart(Date heure_depart) {
+	public void setHeure_depart(Time heure_depart) {
 		this.heure_depart = heure_depart;
 	}
 
 
 
-	public Date getHeure_arrivee() {
+	public Time getHeure_arrivee() {
 		return heure_arrivee;
 	}
 
 
 
-	public void setHeure_arrivee(Date heure_arrivee) {
+	public void setHeure_arrivee(Time heure_arrivee) {
 		this.heure_arrivee = heure_arrivee;
 	}
 
@@ -129,13 +131,13 @@ public class Circuit  {
 
 
 
-	public String getId_contrat() {
+	public long getId_contrat() {
 		return id_contrat;
 	}
 
 
 
-	public void setId_contrat(String id_contrat) {
+	public void setId_contrat(long id_contrat) {
 		this.id_contrat = id_contrat;
 	}
 
@@ -153,19 +155,16 @@ public class Circuit  {
 
 
 
-	public LineString getGeometrie() {
+	public String getGeometrie() {
 		return geometrie;
 	}
 
 
 
-	public void setGeometrie(LineString geometrie) {
+	public void setGeometrie(String geometrie) {
 		this.geometrie = geometrie;
 	}
 
 
-
-
-	
 	
 }

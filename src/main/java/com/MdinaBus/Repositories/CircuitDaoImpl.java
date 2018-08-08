@@ -1,5 +1,6 @@
 package com.MdinaBus.Repositories;
 
+import java.sql.Time;
 import java.util.Date;
 
 import javax.annotation.PostConstruct;
@@ -12,7 +13,7 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 
 import com.MdinaBus.Models.Circuit;
-import com.MdinaBus.Models.cr_ramassage;
+
 import com.vividsolutions.jts.geom.LineString;
 
 import Dao.CircuitDao;
@@ -38,26 +39,21 @@ public class CircuitDaoImpl extends JdbcDaoSupport implements CircuitDao {
     	String nom = cr.getNom();
         double kilometrage_circuit = cr.getKilometrage_circuit();
         double km_HLP=cr.getKm_HLP();
-        
+        Time heure_depart=cr.getHeure_depart();
+        Time heure_arrivee=cr.getHeure_arrivee();
+        Date date=cr.getDate();
+        long id_contrat=cr.getId_contrat();
+        String autre=cr.getAutre();
     	String geom = cr.getGeometrie();
         int res = jdbcTemplate.update(
-        		"INSERT INTO circuit(nom,heure_arrivee,geometrie) VALUES ('"+nom+"','"+h+"','"+geom+"')"
+        		"INSERT INTO circuit(nom,heure_arrivee,geometrie) VALUES ('"+nom+"','"+kilometrage_circuit+"','"+km_HLP+"','"+heure_depart+"','"+heure_arrivee+"','"+date+"','"+id_contrat+"','"+autre+"','"+geom+"')"
         		);
         if(res>0)
         	return true;
         
         return false;
     }
-    private String id;
-    private double kilometrage_circuit;
-    private double km_HLP;
-    private Date heure_depart;
-    private Date heure_arrivee;
-    private Date date;
-    private String id_contrat;
-    private String autre;
-    @Column(name="geometrie", columnDefinition="geometry")
-	private LineString geometrie;
+    
 	
 
 }
