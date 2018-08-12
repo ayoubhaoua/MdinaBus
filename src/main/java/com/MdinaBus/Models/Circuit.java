@@ -14,7 +14,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.vividsolutions.jts.geom.LineString;
+
 
 
 @Entity
@@ -24,37 +24,44 @@ public class Circuit  {
 
 	@Id
 	@GeneratedValue
-	private String id;
+	@Column(columnDefinition="SERIAL")
+	private long id;
 	private String nom;
     private double kilometrage_circuit;
     private double km_HLP;
-    private Time heure_depart;
-    private Time heure_arrivee;
-    private Date date;
-    private long id_contrat;
+    private long id_service;
     private String autre;
     @Column(name="geometrie", columnDefinition="geometry")
 	private String geometrie; 
     
     
  
-	protected Circuit() {
+	public Circuit() {
 	}
 
 
 
 	public Circuit(String nom, double kilometrage_circuit, double km_HLP, Time heure_depart, Time heure_arrivee,
-			Date date, long id_contrat, String autre, String geometrie) {
+			Date date, long id_service, String autre, String geometrie) {
 		super();
 		this.nom = nom;
 		this.kilometrage_circuit = kilometrage_circuit;
 		this.km_HLP = km_HLP;
-		this.heure_depart = heure_depart;
-		this.heure_arrivee = heure_arrivee;
-		this.date = date;
-		this.id_contrat = id_contrat;
+		this.id_service = id_service;
 		this.autre = autre;
 		this.geometrie = geometrie;
+	}
+
+
+
+	public long getId() {
+		return id;
+	}
+
+
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 
@@ -94,51 +101,14 @@ public class Circuit  {
 	}
 
 
-
-	public Time getHeure_depart() {
-		return heure_depart;
+	public long getId_service() {
+		return id_service;
 	}
 
 
 
-	public void setHeure_depart(Time heure_depart) {
-		this.heure_depart = heure_depart;
-	}
-
-
-
-	public Time getHeure_arrivee() {
-		return heure_arrivee;
-	}
-
-
-
-	public void setHeure_arrivee(Time heure_arrivee) {
-		this.heure_arrivee = heure_arrivee;
-	}
-
-
-
-	public Date getDate() {
-		return date;
-	}
-
-
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-
-
-	public long getId_contrat() {
-		return id_contrat;
-	}
-
-
-
-	public void setId_contrat(long id_contrat) {
-		this.id_contrat = id_contrat;
+	public void setId_service(long id_service) {
+		this.id_service = id_service;
 	}
 
 

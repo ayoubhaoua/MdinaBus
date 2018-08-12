@@ -25,19 +25,19 @@ public class CircuitController {
 	
 	public String circuits(Model model) {
 		model.addAttribute("circuits", repo.findAll()) ;
-		model.addAttribute("circuit", new Entite());
+		model.addAttribute("circuit", new Circuit());
 		return "circuits";
 	}
-	 @GetMapping("circuits/supprimer")
+	 @GetMapping("supprimerc")
 		public String supprimer(long id) {
 			repo.deleteById(id);
 			return "redirect:circuits";
 		}
 	 
-	 @PostMapping("/circuits/save")
+	 @PostMapping("savec")
 	    public String save(Circuit circuit ) {
 			dao.save(circuit);
-	        return "redirect:entites";
+	        return "redirect:circuits";
 	    }
 
 

@@ -1,17 +1,11 @@
 package com.MdinaBus.Repositories;
 
-
-
-
-
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.MdinaBus.Models.Entite;
-
+import com.MdinaBus.Models.Abonnement;
 
 @Repository
-public interface EntitesRepo extends CrudRepository<Entite, Long> {
-	Entite findById(long id);
-	
+public interface AbonnementRepo extends CrudRepository<Abonnement, Long> {
+
 }

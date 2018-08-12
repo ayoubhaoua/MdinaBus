@@ -62,28 +62,21 @@
             <tr>
                <th>Nom</th>
                <th>kilometrage</th>
-               <th>HLP</th>
-               <th>heure_depart</th>
-               <th>heure_arrivee</th>
-               <th>date</th>
-               <th>autre</th>
                <th></th>
             </tr>
         </thead>
         <tbody>
-       		<tr th:each="point : ${points}">
-				<td th:text="${point.nom}">nom</td>
-				<td th:text="${point.heure_arrivee}">l'heure</td> 
+       		<tr th:each="c : ${circuits}">
+				<td th:text="${c.nom}">nom</td>
+				<td th:text="${c.kilometrage_circuit}">kilometrage_circuit</td> 
 				<td class="center">
 				<button type="button" class="btn btn-primary buttSup" data-toggle="modal" data-target="#exampleModalCenter">
 	  			supprimer
-	  			<div class="id" th:text="${point.id}" style="display: none"></div>
+	  			<div class="id" th:text="${c.id}" style="display: none"></div>
 				</button>
 				<button type="button" class="btn btn-primary buttEd" data-toggle="modal" data-target="#exampleModalLong">
 	  			editer
-	  			<div class="id" th:text="${point.id}" style="display: none"></div>
-	  			<div class="nom" th:text="${point.nom}" style="display: none"></div>
-	  			<div class="heure_arrivee" th:text="${point.heure_arrivee}" style="display: none"></div>
+	  			<div class="id" th:text="${c.id}" style="display: none"></div>
 				</button>
 				</td>
 			</tr>
@@ -97,8 +90,27 @@
        </div>
        
        
-       
-       <!--   ajouter modal/edite -->
+     <!--   supprimer modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">supprimer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="color: red" >
+      vous voulez vraiment supprimer cette entite ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a type="submit" class="btn btn-primary" href="">supprimer</a>
+      </div>
+    </div>
+  </div>
+</div>  
+          ajouter modal/edite 
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -108,11 +120,11 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="#" th:action="@{/savept}" th:object="${point}" method="post">
+      <form action="#" th:action="@{savec}" th:object="${circuit}" method="post">
       <div class="modal-body">
         <input  id="geometry" style="display: none"  type="text" th:field="*{geometrie}"/>
         nom:        <input id="nom" class="form-control form-control-lg" type="text" placeholder="nom" th:field="*{nom}" />
-        heure:      <input id="heure_arrivee" class="form-control form-control-lg" type="text" placeholder="heure_arrivee" th:field="*{heure_arrivee}" />
+        HLP:        <input id="heure_arrivee" class="form-control form-control-lg" type="text" placeholder="heure_arrivee" th:field="*{heure_arrivee}" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -129,6 +141,11 @@
 	$(document).ready(function() {
     $('#points').DataTable();
 } );
+	$(".buttSup").click(function(){
+		id=$(this).find(".id").html();
+		href="supprimerc?id="+id;
+		$("#exampleModalCenter a[type=submit]").prop("href",href);
+	})
 </script>
 </body>
 </html>
