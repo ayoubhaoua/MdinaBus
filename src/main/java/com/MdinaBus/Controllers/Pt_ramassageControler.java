@@ -5,8 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.MdinaBus.Models.Circuit;
+import com.MdinaBus.Models.Entite;
 import com.MdinaBus.Models.Pt_ramassage;
 import com.MdinaBus.Repositories.Pt_ramassageDaoImpl;
 import com.MdinaBus.Repositories.Pt_ramassageRepo;
@@ -33,6 +36,20 @@ public class Pt_ramassageControler {
 		model.addAttribute("point", new Pt_ramassage());
 		return"pt_ramassage";
 	}
+	
+	
+@GetMapping("/point/{id}")
+	
+	public String services(Model model ,@PathVariable long id) {
+		
+		model.addAttribute("points", pt_repo.findByIdcircuit(id));
+		model.addAttribute("point", new Pt_ramassage());
+		model.addAttribute("id_circuit", "id");
+		return "pt_ramassage";
+		}
+
+
+		
 	@PostMapping("/savept")
     public String save( Pt_ramassage point ) {
 		pt_dao.save(point);

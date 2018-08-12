@@ -38,7 +38,7 @@ public class CircuitDaoImpl extends JdbcDaoSupport implements CircuitDao {
     public boolean save(Circuit cr) {
     	String nom = cr.getNom();
         double kilometrage_circuit = cr.getKilometrage_circuit();
-        long id_contrat=cr.getId_service();
+        long id_contrat=cr.getidservice();
         String autre=cr.getAutre();
     	String geom = cr.getGeometrie();
         int res = jdbcTemplate.update(
