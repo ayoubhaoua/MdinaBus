@@ -5,6 +5,7 @@ package com.MdinaBus.Models;
 
 
 
+import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -13,8 +14,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.vividsolutions.jts.geom.LineString;
-import com.vividsolutions.jts.geom.Point;
+
+
 
 @Entity
 @Table(name = "circuit")
@@ -23,35 +24,57 @@ public class Circuit  {
 
 	@Id
 	@GeneratedValue
-	private String id;
+	@Column(columnDefinition="SERIAL")
+	private long id;
+	private String nom;
     private double kilometrage_circuit;
-    private Date heure_depart;
-    private Date heure_arrivee;
-    private Date date;
-    private String id_contrat;
+    private double km_HLP;
+    private long idservice;
     private String autre;
     @Column(name="geometrie", columnDefinition="geometry")
-	private LineString geometrie; 
+	private String geometrie; 
     
     
  
-	protected Circuit() {
+	public Circuit() {
 	}
 
 
 
-
-	public Circuit(double kilometrage_circuit, Date heure_depart, Date heure_arrivee, Date date, String id_contrat,
-			String autre) {
+	public Circuit(String nom, double kilometrage_circuit, double km_HLP, Time heure_depart, Time heure_arrivee,
+			Date date, long idservice, String autre, String geometrie) {
 		super();
+		this.nom = nom;
 		this.kilometrage_circuit = kilometrage_circuit;
-		this.heure_depart = heure_depart;
-		this.heure_arrivee = heure_arrivee;
-		this.date = date;
-		this.id_contrat = id_contrat;
+		this.km_HLP = km_HLP;
+		this.idservice = idservice;
 		this.autre = autre;
+		this.geometrie = geometrie;
 	}
 
+
+
+	public long getId() {
+		return id;
+	}
+
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+
+	public String getNom() {
+		return nom;
+	}
+
+
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
 
 
 
@@ -61,67 +84,32 @@ public class Circuit  {
 
 
 
-
 	public void setKilometrage_circuit(double kilometrage_circuit) {
 		this.kilometrage_circuit = kilometrage_circuit;
 	}
 
 
 
-
-	public Date getHeure_depart() {
-		return heure_depart;
+	public double getKm_HLP() {
+		return km_HLP;
 	}
 
 
 
+	public void setKm_HLP(double km_HLP) {
+		this.km_HLP = km_HLP;
+	}
 
-	public void setHeure_depart(Date heure_depart) {
-		this.heure_depart = heure_depart;
+
+	public long getidservice() {
+		return idservice;
 	}
 
 
 
-
-	public Date getHeure_arrivee() {
-		return heure_arrivee;
+	public void setidservice(long idservice) {
+		this.idservice = idservice;
 	}
-
-
-
-
-	public void setHeure_arrivee(Date heure_arrivee) {
-		this.heure_arrivee = heure_arrivee;
-	}
-
-
-
-
-	public Date getDate() {
-		return date;
-	}
-
-
-
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-
-
-
-	public String getId_contrat() {
-		return id_contrat;
-	}
-
-
-
-
-	public void setId_contrat(String id_contrat) {
-		this.id_contrat = id_contrat;
-	}
-
 
 
 
@@ -131,19 +119,22 @@ public class Circuit  {
 
 
 
-
 	public void setAutre(String autre) {
 		this.autre = autre;
 	}
-	
 
 
 
-	
+	public String getGeometrie() {
+		return geometrie;
+	}
 
 
 
+	public void setGeometrie(String geometrie) {
+		this.geometrie = geometrie;
+	}
 
-	
+
 	
 }
