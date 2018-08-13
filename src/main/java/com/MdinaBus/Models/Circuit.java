@@ -29,7 +29,7 @@ public class Circuit  {
 	private String nom;
     private double kilometrage_circuit;
     private double km_HLP;
-    private long id_service;
+    private long idservice;
     private String autre;
     @Column(name="geometrie", columnDefinition="geometry")
 	private String geometrie; 
@@ -42,12 +42,12 @@ public class Circuit  {
 
 
 	public Circuit(String nom, double kilometrage_circuit, double km_HLP, Time heure_depart, Time heure_arrivee,
-			Date date, long id_service, String autre, String geometrie) {
+			Date date, long idservice, String autre, String geometrie) {
 		super();
 		this.nom = nom;
 		this.kilometrage_circuit = kilometrage_circuit;
 		this.km_HLP = km_HLP;
-		this.id_service = id_service;
+		this.idservice = idservice;
 		this.autre = autre;
 		this.geometrie = geometrie;
 	}
@@ -101,14 +101,14 @@ public class Circuit  {
 	}
 
 
-	public long getId_service() {
-		return id_service;
+	public long getidservice() {
+		return idservice;
 	}
 
 
 
-	public void setId_service(long id_service) {
-		this.id_service = id_service;
+	public void setidservice(long idservice) {
+		this.idservice = idservice;
 	}
 
 

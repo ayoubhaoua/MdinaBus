@@ -14,6 +14,8 @@
 		<div class="card">
            <div class="card-header">
            		<button id="ajouter" type="button" class="btn btn-primary" data-toggle="modal" data-target="#mapModal"> ajouter </button>
+           		<button id="ajouter" type="button" class="btn btn-primary"> ajouter </button>
+           		<a href="/locations" th:href="@{'/locations/'+${id_service}}"><button id="Locations" type="button" class="btn btn-primary"> Locations </button></a>
            </div>
           </div>
 		<table id="points" class="table table-striped table-bordered" style="width:100%">
@@ -37,6 +39,8 @@
 	  			editer
 	  			<div class="id" th:text="${c.id}" style="display: none"></div>
 				</button>
+				<a href="/point" th:href="@{'/point/'+${circuit.id}}"> 
+				<button type="button" class="btn btn-primary"> details </button></a>
 				</td>
 			</tr>
         </tbody>

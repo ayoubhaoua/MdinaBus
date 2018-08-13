@@ -37,7 +37,7 @@ public class CircuitController {
 	 
 	 @PostMapping("savec/{id}")
 	    public String save(Circuit circuit, @PathVariable long id) {
-		 circuit.setId_service(id);
+		 circuit.setidservice(id);
 			dao.save(circuit);
 	        return "redirect:../services/{id}";
 	    }
