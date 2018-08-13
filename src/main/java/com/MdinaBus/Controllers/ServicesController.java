@@ -14,6 +14,7 @@ import com.MdinaBus.Models.Circuit;
 import com.MdinaBus.Models.Entite;
 import com.MdinaBus.Repositories.CircuitsRepo;
 import com.MdinaBus.Repositories.EntitesRepo;
+import com.MdinaBus.Repositories.LocationRepo;
 
 
 @Controller
@@ -38,7 +39,7 @@ public class ServicesController {
 		if(entite.getType().equals("ecole")) {
 		model.addAttribute("circuits", C_repo.findByIdservice(id));
 		model.addAttribute("circuit", new Circuit());
-		model.addAttribute("id_service", "id");
+		model.addAttribute("id_service", id);
 		return "abonnement";
 		}
 		
