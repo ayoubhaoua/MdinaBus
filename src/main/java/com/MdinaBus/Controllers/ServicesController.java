@@ -38,7 +38,7 @@ public class ServicesController {
 		if(entite.getType().equals("ecole")) {
 		model.addAttribute("circuits", C_repo.findById_service(id));
 		model.addAttribute("circuit", new Circuit());
-		model.addAttribute("id_service", "id");
+		model.addAttribute("id_service", id);
 		return "abonnement";
 		}
 		

@@ -23,17 +23,16 @@ var map, drawControls;
                  
                      var poly = p.substring(0, p.lastIndexOf(","));
                      poly=poly+")";
+                     var km= geom.getLength();
                     $('#geometry').val(poly);
-                    $('#exampleModalLong').modal();
+                	$('#km').val(km);
                         
                 });
 
                     map.addControl(drawControls);
                     map.setCenter(new OpenLayers.LonLat(0, 0), 3);
-                    
-                    $("#ajouter").click(function() {
                         drawControls.activate();
-                       });
+                       
                     
             }
         

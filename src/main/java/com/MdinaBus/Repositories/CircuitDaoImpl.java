@@ -38,11 +38,12 @@ public class CircuitDaoImpl extends JdbcDaoSupport implements CircuitDao {
     public boolean save(Circuit cr) {
     	String nom = cr.getNom();
         double kilometrage_circuit = cr.getKilometrage_circuit();
-        long id_contrat=cr.getId_service();
+        double hlp = cr.getKm_HLP();
+        long id_service=cr.getId_service();
         String autre=cr.getAutre();
     	String geom = cr.getGeometrie();
         int res = jdbcTemplate.update(
-        		"INSERT INTO circuit(nom,heure_arrivee,geometrie) VALUES ('"+nom+"','"+kilometrage_circuit+"','"+id_contrat+"','"+autre+"','"+geom+"')"
+        		"INSERT INTO circuit(nom,kilometrage_circuit,km_HLP,id_service,autre,geometrie) VALUES ('"+nom+"','"+kilometrage_circuit+"','"+hlp+"','"+id_service+"','"+autre+"','"+geom+"')"
         		);
         if(res>0)
         	return true;

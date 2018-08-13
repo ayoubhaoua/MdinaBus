@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.MdinaBus.Models.Circuit;
@@ -34,10 +35,11 @@ public class CircuitController {
 			return "redirect:circuits";
 		}
 	 
-	 @PostMapping("savec")
-	    public String save(Circuit circuit ) {
+	 @PostMapping("savec/{id}")
+	    public String save(Circuit circuit, @PathVariable long id) {
+		 circuit.setId_service(id);
 			dao.save(circuit);
-	        return "redirect:circuits";
+	        return "redirect:../services/{id}";
 	    }
 
 
