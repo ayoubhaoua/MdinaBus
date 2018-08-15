@@ -29,7 +29,7 @@ public class Pt_ramassage  {
 	private Time heure_arrivee;
 	/*private int decalage;
 	private int nbr_eleves;*/
-	private String idcircuit;
+	//private String idcircuit;
 	//private String autre;
 	@Column(name="geometrie", columnDefinition="geometry")
 	private String geometrie; 
@@ -145,7 +145,7 @@ public class Pt_ramassage  {
 
 
 
-	public String getId_circuit() {
+	/*public String getId_circuit() {
 		return idcircuit;
 	}
 
@@ -153,7 +153,7 @@ public class Pt_ramassage  {
 
 	public void setId_circuit(String id_circuit) {
 		this.idcircuit = id_circuit;
-	}
+	}*/
 
 
 

@@ -43,7 +43,7 @@ public class CircuitDaoImpl extends JdbcDaoSupport implements CircuitDao {
         String autre=cr.getAutre();
     	String geom = cr.getGeometrie();
         int res = jdbcTemplate.update(
-        		"INSERT INTO circuit(nom,kilometrage_circuit,km_HLP,id_service,autre,geometrie) VALUES ('"+nom+"','"+kilometrage_circuit+"','"+hlp+"','"+id_service+"','"+autre+"','"+geom+"')"
+        		"INSERT INTO circuit(nom,kilometrage_circuit,km_HLP,idservice,autre,geometrie) VALUES ('"+nom+"','"+kilometrage_circuit+"','"+hlp+"','"+id_service+"','"+autre+"','"+geom+"')"
         		);
         if(res>0)
         	return true;

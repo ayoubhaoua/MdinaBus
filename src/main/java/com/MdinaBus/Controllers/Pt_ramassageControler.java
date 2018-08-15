@@ -42,7 +42,7 @@ public class Pt_ramassageControler {
 	
 	public String services(Model model ,@PathVariable long id) {
 		
-		model.addAttribute("points", pt_repo.findByIdcircuit(id));
+		//model.addAttribute("points", pt_repo.findByIdcircuit(id));
 		model.addAttribute("point", new Pt_ramassage());
 		model.addAttribute("id_circuit", "id");
 		return "pt_ramassage";
