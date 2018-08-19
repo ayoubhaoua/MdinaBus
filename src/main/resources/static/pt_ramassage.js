@@ -5,6 +5,7 @@ var map, drawControls;
 
                 var wmsLayer = new OpenLayers.Layer.WMS( "OpenLayers WMS",
                     "http://vmap0.tiles.osgeo.org/wms/vmap0?", {layers: 'basic'});
+                
 
                 var pointLayer = new OpenLayers.Layer.Vector("Point Layer");
 
@@ -24,6 +25,7 @@ var map, drawControls;
 
                     map.addControl(drawControls);
                     map.setCenter(new OpenLayers.LonLat(0, 0), 3);
+                    
                     
                     $("#ajouter").click(function() {
                         drawControls.activate();

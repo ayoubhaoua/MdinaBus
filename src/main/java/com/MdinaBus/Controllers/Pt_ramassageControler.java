@@ -42,7 +42,7 @@ public class Pt_ramassageControler {
 	
 	public String services(Model model ,@PathVariable long id) {
 		
-		//model.addAttribute("points", pt_repo.findByIdcircuit(id));
+		model.addAttribute("points",  pt_repo.findByIdcircuit(id));
 		model.addAttribute("point", new Pt_ramassage());
 		model.addAttribute("id_circuit", "id");
 		return "pt_ramassage";
@@ -50,8 +50,9 @@ public class Pt_ramassageControler {
 
 
 		
-	@PostMapping("/savept")
-    public String save( Pt_ramassage point ) {
+	@PostMapping("/savept/{id}")
+    public String save( Pt_ramassage point, @PathVariable long id) {
+		point.setIdcircuit(id);
 		pt_dao.save(point);
         return "redirect:point";
     }

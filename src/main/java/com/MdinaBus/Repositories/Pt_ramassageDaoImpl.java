@@ -32,8 +32,9 @@ public class Pt_ramassageDaoImpl extends JdbcDaoSupport implements Pt_ramassageD
     	String nom = pt.getNom();
     	String h = pt.getHeure_arrivee().toString();
     	String geom = pt.getGeometrie();
+    	long idC=pt.getIdcircuit();
         int res = jdbcTemplate.update(
-        		"INSERT INTO pt_ramassage(nom,heure_arrivee,geometrie) VALUES ('"+nom+"','"+h+"','"+geom+"')"
+        		"INSERT INTO pt_ramassage(nom,heure_arrivee,geometrie,idcircuit) VALUES ('"+nom+"','"+h+"','"+geom+"','"+idC+"')"
         		);
         if(res>0)
         	return true;
