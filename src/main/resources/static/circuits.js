@@ -5,10 +5,10 @@ var map, drawControls;
 
                 var wmsLayer = new OpenLayers.Layer.WMS( "OpenLayers WMS",
                     "http://vmap0.tiles.osgeo.org/wms/vmap0?", {layers: 'basic'});
-
+                map.addLayers(wmsLayer);
+                if(kml==""){
                 var lineLayer = new OpenLayers.Layer.Vector("Line Layer");
-
-                map.addLayers([wmsLayer, lineLayer]);
+                map.addLayers(lineLayer);
                 map.addControl(new OpenLayers.Control.LayerSwitcher());
                 map.addControl(new OpenLayers.Control.MousePosition());
 
@@ -34,6 +34,30 @@ var map, drawControls;
                         drawControls.activate();
                        
                     
+            }
+                else{
+                	kmllayer = new OpenLayers.Layer.Vector("KML", {
+    				    strategies: [new OpenLayers.Strategy.Fixed()],
+    				    protocol: new OpenLayers.Protocol.HTTP({
+    				        url: kml,
+    				        format: new OpenLayers.Format.KML({
+    				            extractStyles: true, 
+    				            extractAttributes: true,
+    				            maxDepth: 2
+    				        })
+    				    })
+    				})
+                	 map.addLayers(kmllayer);
+                	 map.setCenter(kmllayer.getDataExtent().getCenterLonLat(), 5);
+                	 var geom = kmllayer.features[0].geometry;
+                	 for(var key in geom.components)
+                         p=p+geom.components[key].x+" "+geom.components[key].y+",";
+                     
+                         var poly = p.substring(0, p.lastIndexOf(","));
+                         poly=poly+")";
+                        $('#geometry').val(poly);
+                    	$('#km').val(geom.getLength());
+                }
             }
         
             
