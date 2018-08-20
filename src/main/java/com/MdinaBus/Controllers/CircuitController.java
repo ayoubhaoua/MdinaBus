@@ -52,21 +52,19 @@ public class CircuitController {
 	        return "redirect:../services/{id}";
 	    }
 	 @PostMapping("savek/{id}")
-	    public String savek(@RequestParam("kml") MultipartFile file, @PathVariable long id,Model model) {
-		 	try {
-				Files.delete(Paths.get(dir));
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}
-		 	new File(dir).mkdirs();
+	    public String savek(@RequestParam("kml") MultipartFile file, @PathVariable long id) {
+		 new File(dir).mkdirs();
+		 File files[] =new File(dir).listFiles();
+		 for (File f : files) {
+	            f.delete();
+	        }
 		 	Path path = Paths.get(dir, file.getOriginalFilename());
 		 	try {
 				Files.write(path, file.getBytes());
-				model.addAttribute("kml",file.getOriginalFilename() );
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-	        return "redirect:../services/{id}";
+	        return "redirect:../services/{id}?kml="+file.getOriginalFilename();
 	    }
 
 

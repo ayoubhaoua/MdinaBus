@@ -30,7 +30,7 @@ public class ServicesController {
 	
 	@GetMapping("/services/{id}")
 	
-	public String services(Model model ,@PathVariable long id) {
+	public String services(Model model ,@PathVariable long id, String kml) {
 		
 		Entite entite = E_repo.findById(id);
 		
@@ -38,6 +38,7 @@ public class ServicesController {
 		model.addAttribute("circuits", C_repo.findByIdservice(id));
 		model.addAttribute("circuit", new Circuit());
 		model.addAttribute("id_service", id);
+		model.addAttribute("kml", kml);
 		return "abonnement";
 		}
 		

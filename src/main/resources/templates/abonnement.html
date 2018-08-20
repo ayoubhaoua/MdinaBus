@@ -7,7 +7,7 @@
 <script th:src="@{/openlayers.js}"></script>
 <title>Insert title here</title>
 </head>
-<body>
+<body >
 	<header th:replace="layout::site-header" />
 	<div class="page">
 		<div class="container">
@@ -121,7 +121,7 @@
 </div>
    
    
-   <script th:inline="javascript">
+   <script >
 	$(document).ready(function() {
     $('#points').DataTable();
 } );
@@ -138,14 +138,25 @@
 	$("#exampleModalLongTitle").html("ajouter un circuit");
 	$("#exampleModalLong button[type=submit]").html("ajouter");
 });
-	var kml;
 	$("#ajouter").click(function(evt){
 		evt.preventDefault();
-		/*<![CDATA[*/
-	     kml = /*[[${kml}]]*/
-		/*]]>*/
 	    init();
 	});
+</script >
+<script th:inline="javascript">
+/*<![CDATA[*/
+kml = /*[[${kml}]]*/"default";
+/*]]>*/
+</script>
+
+
+<script th:inline="javascript">
+/*<![CDATA[*/
+
+    var kml = /*[[${kml}]]*/ 'default';
+    console.log(kml);
+
+/*]]>*/
 </script>
 </body>
 </html>
