@@ -7,7 +7,7 @@
 <script th:src="@{/openlayers.js}"></script>
 <title>Insert title here</title>
 </head>
-<body >
+<body>
 	<header th:replace="layout::site-header" />
 	<div class="page">
 		<div class="container">
@@ -25,7 +25,7 @@
             <tr>
                <th>Nom</th>
                <th>kilometrage</th>
-               <th></th>
+               <th th:text="${kml}"></th>
             </tr>
         </thead>
         <tbody>
@@ -121,7 +121,7 @@
 </div>
    
    
-   <script >
+<script>
 	$(document).ready(function() {
     $('#points').DataTable();
 } );
@@ -140,23 +140,30 @@
 });
 	$("#ajouter").click(function(evt){
 		evt.preventDefault();
-	    init();
+	    ajouter();
 	});
-</script >
-<script th:inline="javascript">
-/*<![CDATA[*/
-kml = /*[[${kml}]]*/"default";
-/*]]>*/
 </script>
-
 
 <script th:inline="javascript">
 /*<![CDATA[*/
-
-    var kml = /*[[${kml}]]*/ 'default';
-    console.log(kml);
-
+    kml = /*[[${kml}]]*/ 'default';
+    init();
+    if(kml!=null){
+    	kmllayer = new OpenLayers.Layer.Vector("KML", {
+    		strategies: [new OpenLayers.Strategy.Fixed()],
+		    protocol: new OpenLayers.Protocol.HTTP({
+		        url: "../kml/"+kml,
+		        format: new OpenLayers.Format.KML({
+		            extractStyles: true, 
+		            extractAttributes: true,
+		            maxDepth: 2
+		        })
+		    })
+		})
+    	 map.addLayer(kmllayer);
+    }
 /*]]>*/
 </script>
+
 </body>
 </html>

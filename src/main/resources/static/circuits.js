@@ -1,4 +1,5 @@
-var map, drawControls,geom;
+
+ var drawControls,geom;
 
             function init(){
                 map = new OpenLayers.Map('map');
@@ -8,6 +9,8 @@ var map, drawControls,geom;
                 map.addLayer(wmsLayer);
            	    map.setCenter(new OpenLayers.LonLat(-7.13,33.67), 7);
                 console.log(kml);
+            }
+            function ajouter() {
                 if(kml==null){
                 var lineLayer = new OpenLayers.Layer.Vector("Line Layer");
                 map.addLayers(lineLayer);
@@ -37,18 +40,7 @@ var map, drawControls,geom;
                     
             }
                 else{
-                	kmllayer = new OpenLayers.Layer.Vector("KML", {
-                		strategies: [new OpenLayers.Strategy.Fixed()],
-    				    protocol: new OpenLayers.Protocol.HTTP({
-    				        url: "../kml/"+kml,
-    				        format: new OpenLayers.Format.KML({
-    				            extractStyles: true, 
-    				            extractAttributes: true,
-    				            maxDepth: 2
-    				        })
-    				    })
-    				})
-                	 map.addLayer(kmllayer);
+                	
                 	 
                 	 geom = kmllayer.features[0].geometry;
                 	 for(var key in geom.components)
