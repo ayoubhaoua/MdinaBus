@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.MdinaBus.Models.Circuit;
-import com.MdinaBus.Models.Entite;
+
 import com.MdinaBus.Models.Pt_ramassage;
 import com.MdinaBus.Repositories.Pt_ramassageDaoImpl;
 import com.MdinaBus.Repositories.Pt_ramassageRepo;

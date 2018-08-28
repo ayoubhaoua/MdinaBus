@@ -5,8 +5,6 @@ package com.MdinaBus.Models;
 
 
 
-import java.sql.Time;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -41,8 +39,7 @@ public class Circuit  {
 
 
 
-	public Circuit(String nom, double kilometrage_circuit, double km_HLP, Time heure_depart, Time heure_arrivee,
-			Date date, long idservice, String autre, String geometrie) {
+	public Circuit(String nom, double kilometrage_circuit, double km_HLP, long idservice, String autre, String geometrie) {
 		super();
 		this.nom = nom;
 		this.kilometrage_circuit = kilometrage_circuit;
@@ -134,7 +131,4 @@ public class Circuit  {
 	public void setGeometrie(String geometrie) {
 		this.geometrie = geometrie;
 	}
-
-
-	
 }

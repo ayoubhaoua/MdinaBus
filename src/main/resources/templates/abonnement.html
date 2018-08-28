@@ -3,7 +3,7 @@
 <head th:replace="layout::site-head" />
 <link rel="stylesheet" href="../static/style.css" type="text/css" th:href=@{/style.css}/>
 
-<script type="text/javascript" th:src="@{/circuits.js}"></script>
+<script src="../static/circuits.js" th:src="@{/circuits.js}"></script>
 <script th:src="@{/openlayers.js}"></script>
 <title>Insert title here</title>
 </head>
@@ -41,7 +41,7 @@
 	  			editer
 	  			<div class="id" th:text="${c.id}" style="display: none"></div>
 				</button>
-				<a href="/point" th:href="@{'/point/'+${circuit.id}}"> 
+				<a href="/point" th:href="@{'/point/'+${c.id}}"> 
 				<button type="button" class="btn btn-primary"> details </button></a>
 				</td>
 			</tr>
@@ -81,14 +81,14 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="#" th:action="@{'../savec/'+${id_service}}" th:object="${circuit}" method="post">
-      <div class="modal-body">
+      <form id="savec" action="#" th:action="@{'../savec/'+${id_service}}" th:object="${crss}" method="post">
+      <div class="modal-body" th:each="cr, item: *{crs}">
       	
-        <input  id="geometry" style="display: none"  type="text" th:field="*{geometrie}"/>
-        <input  id="km" style="display: none"  type="text" th:field="*{kilometrage_circuit}"/>
-        nom:        <input id="nom" class="form-control form-control-lg" type="text" placeholder="nom" th:field="*{nom}" />
-        HLP:        <input id="hlp" class="form-control form-control-lg" type="text" placeholder="HLP" th:field="*{km_HLP}" />
-        autre:        <input id="autre" class="form-control form-control-lg" type="text" value="" placeholder="autre" th:field="*{autre}" />
+        <input  th:id="${'geom'+__${item.index}__}" style="display: none"  type="text" th:field="*{crs[__${item.index}__].geometrie}"/>
+        <input  th:id="${'km'+__${item.index}__}" style="display: none"  type="text" th:field="*{crs[__${item.index}__].kilometrage_circuit}"/>
+        nom:        <input  class="form-control form-control-lg nom" type="text" placeholder="nom" th:field="*{crs[__${item.index}__].nom}" />
+        HLP:        <input  class="form-control form-control-lg hlp" type="text" placeholder="HLP" th:field="*{crs[__${item.index}__].km_HLP}" />
+        autre:      <input  class="form-control form-control-lg autre" type="text" value="" placeholder="autre" th:field="*{crs[__${item.index}__].autre}" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -114,7 +114,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button id="continuer" type="button" class="btn btn-primary buttSup" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalLong">continuer</button>
+        <button id="continuer" type="button" class="btn btn-primary" data-dismiss="modal">continuer</button>
       </div>
     </div>
   </div>
@@ -131,12 +131,20 @@
 		$("#exampleModalCenter a[type=submit]").prop("href",href);
 	})
 	$("#continuer").click(function(){
-	$("#id").prop("disabled",true);
-	$("#nom").val("");
-	$("#autre").val("");
-	$("#hlp").val("");
-	$("#exampleModalLongTitle").html("ajouter un circuit");
-	$("#exampleModalLong button[type=submit]").html("ajouter");
+	$("#savec .id").prop("disabled",true);
+	$("#savec .nom").val("");
+	$("#savec .autre").val("");
+	$("#savec .hlp").val("0.0");
+	if(kml==null){
+		$("#exampleModalLongTitle").html("ajouter un circuit");
+		$("#exampleModalLong button[type=submit]").html("ajouter");
+		$('#exampleModalLong').modal();
+	}
+	else{
+		$("#savec").submit();
+	}
+	
+	
 });
 	$("#ajouter").click(function(evt){
 		evt.preventDefault();
