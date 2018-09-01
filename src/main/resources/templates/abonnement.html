@@ -25,21 +25,24 @@
             <tr>
                <th>Nom</th>
                <th>kilometrage</th>
-               <th th:text="${kml}"></th>
+               <th></th>
             </tr>
         </thead>
         <tbody>
        		<tr th:each="c : ${circuits}">
 				<td th:text="${c.nom}">nom</td>
-				<td th:text="${c.kilometrage_circuit}">kilometrage_circuit</td> 
+				<td th:text="${c.kilometrage_circuit}">kilometrage_circuit</td>
 				<td class="center">
 				<button type="button" class="btn btn-primary buttSup" data-toggle="modal" data-target="#exampleModalCenter">
 	  			supprimer
 	  			<div class="id" th:text="${c.id}" style="display: none"></div>
 				</button>
-				<button type="button" class="btn btn-primary buttEd" data-toggle="modal" data-target="#exampleModalLong">
+				<button type="button" class="btn btn-primary buttEd" data-toggle="modal" data-target="#editeModal">
 	  			editer
 	  			<div class="id" th:text="${c.id}" style="display: none"></div>
+	  			<div class="nom" th:text="${c.nom}" style="display: none"></div>
+	  			<div class="hlp" th:text="${c.km_HLP}" style="display: none"></div>
+	  			<div class="autre" th:text="${c.autre}" style="display: none"></div>
 				</button>
 				<a href="/point" th:href="@{'/point/'+${c.id}}"> 
 				<button type="button" class="btn btn-primary"> details </button></a>
@@ -99,6 +102,34 @@
   </div>
 </div>
 
+
+ <!-- edite modal -->
+<div class="modal fade" id="editeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Edite </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="savec" action="#" th:action="@{'../editec/'+${id_service}}" th:object="${cr}" method="post">
+      <div class="modal-body">
+      
+      	<input  id="id" style="display: none"  type="text" th:field="*{id}"/>
+        nom:        <input  class="form-control form-control-lg nom" type="text" placeholder="nom" th:field="*{nom}" />
+        HLP:        <input  class="form-control form-control-lg hlp" type="text" placeholder="HLP" th:field="*{km_HLP}" />
+        autre:      <input  class="form-control form-control-lg autre" type="text" value="" placeholder="autre" th:field="*{autre}" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">save</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
  <!-- map modal -->
 <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -131,7 +162,6 @@
 		$("#exampleModalCenter a[type=submit]").prop("href",href);
 	})
 	$("#continuer").click(function(){
-	$("#savec .id").prop("disabled",true);
 	$("#savec .nom").val("");
 	$("#savec .autre").val("");
 	$("#savec .hlp").val("0.0");
@@ -150,6 +180,16 @@
 		evt.preventDefault();
 	    ajouter();
 	});
+	$(".buttEd").click(function(){
+		id=$(this).find(".id").html();
+		nom=$(this).find(".nom").html();
+		autre=$(this).find(".autre").html();
+		hlp=$(this).find(".hlp").html();
+		$("#id").val(id).prop("disabled",false);
+		$("#nom").val(nom);
+		$("#autre").val(autre);
+		$("#hlp").val(hlp);
+	})
 </script>
 
 <script th:inline="javascript">

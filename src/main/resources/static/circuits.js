@@ -26,7 +26,7 @@
                    var kmg= geom.getLength();
                    
                  $('#geom0').val(polygone);
-             	$('#km0').val(kmg);
+             	$('#km0').val(kmg.toPrecision(4));
              	 console.log(polygone);
              });
             }
@@ -52,7 +52,7 @@
                             polygone = p.substring(0, p.lastIndexOf(","));
                             polygone=polygone+")";
                         $(idg).val(polygone);
-                       	$(idk).val(geom.getLength());
+                       	$(idk).val(geom.getLength().toPrecision(4));
                 	}
                 }
             }       

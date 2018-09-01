@@ -43,7 +43,7 @@ public class Pt_ramassageControler {
 		
 		//model.addAttribute("points", pt_repo.findByIdcircuit(id));
 		model.addAttribute("point", new Pt_ramassage());
-		model.addAttribute("id_circuit", "id");
+		model.addAttribute("id_circuit", id);
 		return "pt_ramassage";
 		}
 

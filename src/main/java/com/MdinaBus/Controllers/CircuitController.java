@@ -53,6 +53,12 @@ public class CircuitController {
 		 }
 	        return "redirect:../services/{id}";
 	    }
+	 @PostMapping("editec/{id}")
+	    public String edite(Circuit cr, @PathVariable long id) {
+			 cr.setidservice(id);
+			 dao.edite(cr);
+	        return "redirect:../services/{id}";
+	    }
 	 @PostMapping("savek/{id}")
 	    public String savek(@RequestParam("kml") MultipartFile file, @PathVariable long id) {
 		 new File(dir).mkdirs();

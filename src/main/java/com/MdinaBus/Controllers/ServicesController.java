@@ -54,6 +54,7 @@ public class ServicesController {
 			}
 		}
 		model.addAttribute("crss", crs);
+		model.addAttribute("cr", new Circuit());
 		return "abonnement";
 		}
 		

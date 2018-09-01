@@ -49,28 +49,19 @@ public class CircuitDaoImpl extends JdbcDaoSupport implements CircuitDao {
         
         return false;
     }
-
-	@Override
-	public int savekml(ArrayList<Circuit> crs) {
-		int i=0;
-		for(Circuit cr:crs) {
-			String nom = cr.getNom();
-	        double kilometrage_circuit = cr.getKilometrage_circuit();
-	         double hlp = cr.getKm_HLP();
-	        long id_service = cr.getidservice();
-	         String autre = cr.getAutre();
-	    	 String geom = cr.getGeometrie();
-	        int res = jdbcTemplate.update(
-	        		"INSERT INTO circuit(nom,kilometrage_circuit,km_HLP,idservice,autre,geometrie) VALUES ('"+nom+"','"+kilometrage_circuit+"','"+hlp+"','"+id_service+"','"+autre+"','"+geom+"')"
-	        		);
-	        if(res>0)
-	        	i++;
-		}
-		return i;
-	}
     
-    
-    
-	
-
+    @Override
+    public boolean edite(Circuit cr) {
+    	long id = cr.getId();
+    	String nom = cr.getNom();
+        double hlp = cr.getKm_HLP();
+        String autre=cr.getAutre();
+        int res = jdbcTemplate.update(
+        		"UPDATE public.circuit SET autre='"+autre+"', km_hlp='"+hlp+"', nom='"+nom+"' WHERE id="+id+";"
+        		);
+        if(res>0)
+        	return true;
+        
+        return false;
+    }
 }
