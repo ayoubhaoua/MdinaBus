@@ -12,60 +12,184 @@ import javax.persistence.Table;
 public class Roulement {
 	@Id
 	@GeneratedValue
-	private String id;
-	private Date date;
+	private long id;
+	private String entite;
+	private String date;
     private double hlp;
-	private String id_circuit;
-	private String id_salarie;
-	private String id_bus;
-	private String autres_remarques;
-	public Date getDate() {
+	private String circuit;
+	private String machiniste;
+	private String accompagnatrice;
+	private String bus;
+	
+	
+	
+	
+	
+	
+	public Roulement(long id, String entite, String date, double hlp, String circuit, String machiniste,
+			String accompagnatrice, String bus) {
+		super();
+		this.id = id;
+		this.entite = entite;
+		this.date = date;
+		this.hlp = hlp;
+		this.circuit = circuit;
+		this.machiniste = machiniste;
+		this.accompagnatrice = accompagnatrice;
+		this.bus = bus;
+	}
+
+
+
+
+
+
+	public Roulement() {
+		
+	}
+
+
+
+
+
+
+	public long getId() {
+		return id;
+	}
+
+
+
+
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+
+
+
+
+	public String getEntite() {
+		return entite;
+	}
+
+
+
+
+
+
+	public void setEntite(String entite) {
+		this.entite = entite;
+	}
+
+
+
+
+
+
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+
+
+
+
+
+
+	public void setDate(String date) {
 		this.date = date;
 	}
+
+
+
+
+
+
 	public double getHlp() {
 		return hlp;
 	}
+
+
+
+
+
+
 	public void setHlp(double hlp) {
 		this.hlp = hlp;
 	}
-	public String getId_circuit() {
-		return id_circuit;
+
+
+
+
+
+
+	public String getCircuit() {
+		return circuit;
 	}
-	public void setId_circuit(String id_circuit) {
-		this.id_circuit = id_circuit;
+
+
+
+
+
+
+	public void setCircuit(String circuit) {
+		this.circuit = circuit;
 	}
-	public String getId_salarie() {
-		return id_salarie;
+
+
+
+
+
+
+	public String getMachiniste() {
+		return machiniste;
 	}
-	public void setId_salarie(String id_salarie) {
-		this.id_salarie = id_salarie;
+
+
+
+
+
+
+	public void setMachiniste(String machiniste) {
+		this.machiniste = machiniste;
 	}
-	public String getId_bus() {
-		return id_bus;
+
+
+
+
+
+
+	public String getAccompagnatrice() {
+		return accompagnatrice;
 	}
-	public void setId_bus(String id_bus) {
-		this.id_bus = id_bus;
+
+
+
+
+
+
+	public void setAccompagnatrice(String accompagnatrice) {
+		this.accompagnatrice = accompagnatrice;
 	}
-	public String getAutres_remarques() {
-		return autres_remarques;
+
+
+
+
+
+
+	public String getBus() {
+		return bus;
 	}
-	public void setAutres_remarques(String autres_remarques) {
-		this.autres_remarques = autres_remarques;
+
+
+
+
+
+
+	public void setBus(String bus) {
+		this.bus = bus;
 	}
-	public Roulement(Date date, double hlp, String id_circuit, String id_salarie, String id_bus,
-			String autres_remarques) {
-		super();
-		this.date = date;
-		this.hlp = hlp;
-		this.id_circuit = id_circuit;
-		this.id_salarie = id_salarie;
-		this.id_bus = id_bus;
-		this.autres_remarques = autres_remarques;
-	}
-	
-	
 	
 }

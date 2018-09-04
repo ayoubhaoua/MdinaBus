@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
@@ -63,5 +64,18 @@ public class CircuitDaoImpl extends JdbcDaoSupport implements CircuitDao {
         	return true;
         
         return false;
+    }
+    
+    @Override
+    public String findGeometrieByid(long id) {
+    	String geom;
+    	try {
+    	     String sql = "SELECT ST_AsText(GEOMETRIE) FROM circuit WHERE id ='"+id+ "'";
+    	     geom= jdbcTemplate.queryForObject(sql, String.class);
+    	} 
+    	catch (EmptyResultDataAccessException e) {
+    	   geom="";
+    	}
+    	return geom;
     }
 }

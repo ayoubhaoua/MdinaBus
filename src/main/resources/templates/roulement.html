@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: site-head">
+<title>mdina bus</title>
+</head>
+<body>
+	<div class="container">
+	<header th:replace="layout::site-header" />
+	</div>
+	<div class="page">
+		<div class="container">
+	<table id="consomation" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+               <th>Entite</th>
+               <th>Circuit</th>
+               <th>Hlp</th>
+               <th>Date</th>
+               <th>BUS</th>
+               <th>MACHINISTE</th>
+               <th>Accompagnatrice</th>
+               <th></th>
+            </tr>
+        </thead>
+        <tbody>
+       		<tr th:each="r : ${roulms}">
+				<td th:text="${r.entite}">entite</td>
+				<td th:text="${r.circuit}">circuit</td>
+				<td th:text="${r.hlp}">date</td> 
+				<td th:text="${r.date}">date</td>
+				<td th:text="${r.bus}">bus</td>
+				<td th:text="${r.machiniste}">machiniste</td>
+				<td th:text="${r.accompagnatrice}">gasoil</td>
+				<td class="center">
+				<button type="button" class="btn btn-primary buttSup" data-toggle="modal" data-target="#exampleModalCenter">
+	  			supprimer
+	  			<div class="id" th:text="${r.id}" style="display: none"></div>
+				</button>
+				</td>
+			</tr>
+			<tr>
+				<form  action="#" th:action="@{roulement/save}" th:object="${roul}" method="post">
+				<td class="center">				
+				<input id="entite" data-toggle="modal" data-target="#entites" readonly="readonly" class="form-control " value="entite" placeholder="entite" type="text" th:field="*{entite}" />
+				</td>
+				<td class="center">
+				<input id="circuit" data-toggle="modal" data-target="#circuits" readonly="readonly" class="form-control " type="text" value="circuit" placeholder="circuit" th:field="*{circuit}" />
+				</td>
+				<td class="center"><input id="hlp" class="form-control " type="number" placeholder="hlp" th:field="*{hlp}" /></td>	
+				<td class="center"><input id="date" class="form-control " type="date" placeholder="date" th:field="*{date}" /></td>	
+				<td class="center"><input id="bus" class="form-control" type="text" placeholder="bus" th:field="*{bus}" /></td>
+				<td class="center"><input id="machiniste" class="form-control " type="text" placeholder="machiniste" th:field="*{machiniste}" /></td>
+				<td class="center"><input id="accompagnatrice" class="form-control " type="text" placeholder="accompagnatrice" th:field="*{accompagnatrice}" /></td>
+				<td class="center"><button type="submit" class="btn btn-primary">ajouter</button></td>
+				</form>
+			</tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+<script type="text/javascript">
+$(".buttSup").click(function(){
+	id=$(this).find(".id").html();
+	href="roulement/supprimer?idr="+id;
+	$("#exampleModalCenter a[type=submit]").prop("href",href);
+})
+</script>
+
+<!--   supprimer modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">supprimer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="color: red" >
+      vous voulez vraiment supprimer cette entite ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a type="submit" class="btn btn-primary" href="">supprimer</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--   entites -->
+<div class="modal fade" id="entites" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">les entitees </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div th:each="e : ${entites}">
+        	<a  class="btn btn-primary" th:href="@{'?id='+${e.id}}" th:text="${e.nom}">entite</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--  circuits  -->
+<div class="modal fade" id="circuits" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">ajouter entite </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div th:each="c : ${circuits}">
+        	<a  class="btn btn-primary"  th:text="${c.nom}+'------'+${c.km_HLP}" onclick="circuit(this)" data-dismiss="modal">entite</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('#consomation').DataTable();
+} );
+</script>
+
+<script th:inline="javascript">
+/*<![CDATA[*/
+     entite = /*[[${e}]]*/ 'default';
+/*]]>*/
+</script>
+
+<script type="text/javascript">
+	if(entite!="null"){
+		$("#entite").prop("placeholder",entite);
+		$("#entite").val(entite);
+	}
+	
+	function circuit(a){
+		c=a.innerHTML.split("------")[0];
+		hlp=a.innerHTML.split("------")[1];
+		console.log(hlp);
+		$("#circuit").val(c);
+		$("#circuit").prop("placeholder",c);
+		$("#hlp").val(hlp);
+	}
+</script>
+</body>
+</html>

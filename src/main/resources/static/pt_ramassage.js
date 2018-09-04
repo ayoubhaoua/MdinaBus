@@ -1,4 +1,4 @@
-var map, drawControls;
+var map, drawControls, kmllayer;
 
             function init(){
                 map = new OpenLayers.Map('map');
@@ -30,6 +30,6 @@ var map, drawControls;
                        });
                     
             }
-        
+            
             
             

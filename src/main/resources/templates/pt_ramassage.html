@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head>
+<head th:replace="layout::site-head" />
 
-<meta charset="utf-8"/>
-<link rel="stylesheet" href="../static/bootstrap/bootstrap.min.css" th:href=@{/bootstrap/bootstrap.min.css}/>
 <link rel="stylesheet" href="../static/style.css" type="text/css" th:href=@{/style.css}/>
-<link rel="stylesheet" type="text/css" href="../static/css.css" th:href=@{/css.css}/>
-<link rel="stylesheet" href="../static/dataTables/dataTables.bootstrap4.min.css" th:href=@{/dataTables/dataTables.bootstrap4.min.css}/>
 
-
-<script src="bootstrap/jquery-3.1.1.slim.min.js" ></script>
-<script src="bootstrap/tether.min.js"></script>
-<script src="bootstrap/bootstrap.min.js"></script>
-<script src="dataTables/jquery.dataTables.min.js"></script>
-<script src="dataTables/dataTables.bootstrap4.min.js"></script>
-<script src="openlayers.js"></script>
-<script src="pt_ramassage.js"></script>
+<script src="../static/pt_ramassage.js" th:src="@{/pt_ramassage.js}"></script>
+<script th:src="@{/openlayers.js}"></script>
 
 <title>Insert title here</title>
 </head>
-<body onload="init()">
+<body>
 	<header th:replace="layout::site-header" />
 	<div class="page">
 		<div class="row">
     	<div class="col col-lg-6" style="padding-left: 50px">
 		<div class="card">
            <div class="card-header">
-           		<button id="ajouter" type="button" class="btn btn-primary"> ajouter </button>
+           		<button id="ajouter" type="button" class="btn btn-primary"> dessiner </button>
+           		<form th:action="@{'../savekml/'+${id_circuit}}" enctype="multipart/form-data" method="post">
+           		<input type="file" name="kml"/>
+           		<button id="envoyer" type="submit" class="btn btn-primary"> envoyer kml </button>
+           		</form>
+           		<button id="show" class="btn btn-primary"> show </button>
+           		<button id="ajouterkml" class="btn btn-primary"> ajouter </button>
            </div>
           </div>
 	<table id="points" class="table table-striped table-bordered" style="width:100%">
@@ -51,7 +47,6 @@
 	  			editer
 	  			<div class="id" th:text="${point.id}" style="display: none"></div>
 	  			<div class="nom" th:text="${point.nom}" style="display: none"></div>
-	  			
 	  			<div class="heure_arrivee" th:text="${point.heure_arrivee}" style="display: none"></div>
 				</button>
 				</td>
@@ -64,7 +59,49 @@
   
         </div>
        </div>
-       
+     
+          <!--   supprimer modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">supprimer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="color: red" >
+      vous voulez vraiment supprimer cette entite ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a type="submit" class="btn btn-primary" href="">supprimer</a>
+      </div>
+    </div>
+  </div>
+</div>   
+
+
+<!--   kml modal -->
+<div class="modal fade" id="Modalkml" tabindex="-1" role="dialog" aria-labelledby="ModalkmlTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalkmlTitle">ajouter</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="color: green;" >
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="submitkml" type="button" class="btn btn-primary" >ajouter</button>
+      </div>
+    </div>
+  </div>
+</div>   
        
        
        <!--   ajouter modal/edite -->
@@ -77,11 +114,12 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="#" th:action="@{/savept}" th:object="${point}" method="post">
+      <form action="#" th:action="@{'../savept/'+${id_circuit}}" th:object="${point}" method="post">
       <div class="modal-body">
+      	<input  id="id" style="display: none"  type="text" th:field="*{id}"/>
         <input  id="geometry" style="display: none"  type="text" th:field="*{geometrie}"/>
         nom:        <input id="nom" class="form-control form-control-lg" type="text" placeholder="nom" th:field="*{nom}" />
-        heure:      <input id="heure_arrivee" class="form-control form-control-lg" type="text" placeholder="heure_arrivee" th:field="*{heure_arrivee}" />
+        heure:      <input id="heure_arrivee" class="form-control form-control-lg" type="time" placeholder="heure_arrivee" th:field="*{heure_arrivee}" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -92,12 +130,92 @@
   </div>
 </div>
     </div>
+   <form action="#" th:action="@{'../savekmlpt/'+${id_circuit}}" id="formkml" method="post">
+   <input  id="geomkml" style="display: none" name="geom"  type="text"/>
+   </form>
    
-   
-   <script type="text/javascript">
+<script type="text/javascript">
 	$(document).ready(function() {
     $('#points').DataTable();
-} );
+	} );
+	
+	$(".buttSup").click(function(){
+		idp=$(this).find(".id").html();
+		a=window.location.href.split("/");
+		a=a[a.length-1].split("?");
+		id=a[0];
+		href="../supprimerpt/"+id+"?idp="+idp;
+		$("#exampleModalCenter a[type=submit]").prop("href",href);
+	})
+	
+	$(".buttEd").click(function(){
+		id=$(this).find(".id").html();
+		nom=$(this).find(".nom").html();
+		adresse=$(this).find(".heure_arrivee").html();
+		$("#id").val(id).prop("disabled",false);
+		$("#geometry").val("save");
+		$("#nom").val(nom);
+		$("#heure_arrivee").val(heure_arrivee);
+		$("#exampleModalLongTitle").html("edite "+nom);
+		$("#exampleModalLong button[type=submit]").html("save");
+	})
+
+	$("#ajouter").click(function(){
+		$("#id").prop("disabled",true);
+		$("#nom").val("");
+		$("#adresse").val("");
+		$("#type").val("ecole");
+		$("#exampleModalLongTitle").html("ajouter un point");
+		$("#exampleModalLong button[type=submit]").html("ajouter");
+	})
+	
+	
+	$("#submitkml").click(function(){
+		$("#formkml").submit();
+	})
+	
+  
+     $("#ajouterkml").click(function(evt) {
+           evt.preventDefault();
+           		var geom;
+            	var p="";
+            	for(i=0 ; i< kmllayer.features.length-1 ; i++){
+            		geom = kmllayer.features[i].geometry; 
+            		if(geom!=null){
+            			p=p+geom.x+","+geom.y+";";
+            		}
+            		           		
+            	}
+            	geom = kmllayer.features[i].geometry;
+            	if(geom!=null){
+            		p=p+geom.x+","+geom.y;
+        		}	        
+	        $("#geomkml").val(p);
+	        $("#ModalkmlTitle").html("ajouter"+kmllayer.features.length+"point/s de ramassage");
+	        $("#Modalkml").modal();
+    });
 </script>
+
+<script th:inline="javascript">
+/*<![CDATA[*/
+    kml = /*[[${kml}]]*/ 'default';
+    init();
+    if(kml!=null && kml!=""){
+    	kmllayer = new OpenLayers.Layer.Vector("KML", {
+    		strategies: [new OpenLayers.Strategy.Fixed()],
+		    protocol: new OpenLayers.Protocol.HTTP({
+		        url: "../kml/"+kml,
+		        format: new OpenLayers.Format.KML({
+		            extractStyles: true, 
+		            extractAttributes: true,
+		            maxDepth: 2
+		        })
+		    })
+		})
+    	map.addLayer(kmllayer);
+    }
+/*]]>*/
+</script>
+
 </body>
 </html>

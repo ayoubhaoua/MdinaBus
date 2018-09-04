@@ -158,7 +158,10 @@
 } );
 	$(".buttSup").click(function(){
 		id=$(this).find(".id").html();
-		href="supprimerc?id="+id;
+		a=window.location.href.split("/");
+		a=a[a.length-1].split("?");
+		ide=a[0];
+		href="../supprimerc/"+ide+"?idc="+id;
 		$("#exampleModalCenter a[type=submit]").prop("href",href);
 	})
 	$("#continuer").click(function(){
@@ -196,7 +199,7 @@
 /*<![CDATA[*/
     kml = /*[[${kml}]]*/ 'default';
     init();
-    if(kml!=null){
+    if(kml!=null && kml!=""){
     	kmllayer = new OpenLayers.Layer.Vector("KML", {
     		strategies: [new OpenLayers.Strategy.Fixed()],
 		    protocol: new OpenLayers.Protocol.HTTP({

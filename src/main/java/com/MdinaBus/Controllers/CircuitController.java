@@ -5,13 +5,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,17 +30,10 @@ public class CircuitController {
 	
 	String dir = System.getProperty("user.dir")+"/src/main/resources/static/kml";
 	
-	@GetMapping("/circuits")
-	
-	public String circuits(Model model) {
-		model.addAttribute("circuits", repo.findAll()) ;
-		model.addAttribute("circuit", new Circuit());
-		return "circuits";
-	}
-	 @GetMapping("supprimerc")
-		public String supprimer(long id) {
-			repo.deleteById(id);
-			return "redirect:circuits";
+	 @GetMapping("supprimerc/{id}")
+		public String supprimer(long idc ,@PathVariable long id) {
+			repo.deleteById(idc);
+			return "redirect:../services/{id}";
 		}
 	 
 	 @PostMapping("savec/{id}")
