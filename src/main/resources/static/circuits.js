@@ -1,12 +1,32 @@
 
  var drawControls,geom,lineLayer;
+ var apiKey = "Au2r8DSGmoBKWxlwGjGhci4nUNGzfpuPJujkqsFwEw6D1zY3rLRhA4Y8JLWUCKVe";
+ 
 
             function init(){
                 map = new OpenLayers.Map('map');
                 console.log(kml);
                 var wmsLayer = new OpenLayers.Layer.WMS( "OpenLayers WMS",
                     "http://vmap0.tiles.osgeo.org/wms/vmap0?", {layers: 'basic'});
-                map.addLayer(wmsLayer);
+                
+                
+                var road = new OpenLayers.Layer.Bing({
+                    key: apiKey,
+                    type: "Road",
+                    
+                    metadataParams: {mapVersion: "v1"}
+                });
+                var aerial = new OpenLayers.Layer.Bing({
+                    key: apiKey,
+                    type: "Aerial"
+                });
+                var hybrid = new OpenLayers.Layer.Bing({
+                    key: apiKey,
+                    type: "AerialWithLabels",
+                    name: "Bing Aerial With Labels"
+                });
+
+                map.addLayers([road, aerial, hybrid]);
            	    map.setCenter(new OpenLayers.LonLat(-7.13,33.67), 7);
            	    
            	 map.addControl(new OpenLayers.Control.LayerSwitcher());
