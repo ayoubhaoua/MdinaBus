@@ -5,6 +5,18 @@
 .navbar{
 	background-color : #46C1B5;
 }
+.smallmap {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+}
+#tags {
+    display: none;
+}
+
+#docs p {
+    margin-bottom: 0.5em;
+}
 /*
 body {
    background-image: url("background.jpg");
