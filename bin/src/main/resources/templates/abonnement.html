@@ -46,7 +46,6 @@
 				</button>
 				<a href="/point" th:href="@{'/point/'+${c.id}}"> 
 				<button type="button" class="btn btn-primary"> details </button></a>
-				
 				</td>
 			</tr>
         </tbody>
@@ -87,7 +86,7 @@
       </div>
       <form id="savec" action="#" th:action="@{'../savec/'+${id_service}}" th:object="${crss}" method="post">
       <div class="modal-body" th:each="cr, item: *{crs}">
-      	 
+      	
         <input  th:id="${'geom'+__${item.index}__}" style="display: none"  type="text" th:field="*{crs[__${item.index}__].geometrie}"/>
         <input  th:id="${'km'+__${item.index}__}" style="display: none"  type="text" th:field="*{crs[__${item.index}__].kilometrage_circuit}"/>
         nom:        <input  class="form-control form-control-lg nom" type="text" placeholder="nom" th:field="*{crs[__${item.index}__].nom}" />

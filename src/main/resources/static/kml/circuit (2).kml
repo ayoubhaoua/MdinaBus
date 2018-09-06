@@ -1,0 +1,2543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Carte sans titre</name>
+    <description/>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-1267FF-5000-nodesc-normal">
+      <LineStyle>
+        <color>ffff6712</color>
+        <width>5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="line-1267FF-5000-nodesc-highlight">
+      <LineStyle>
+        <color>ffff6712</color>
+        <width>7.5</width>
+      </LineStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="line-1267FF-5000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-1267FF-5000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-1267FF-5000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Circuit 01- ALPHONSE DAUDET</name>
+      <Placemark>
+        <name>18</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.60796, -7.5512786<br>Altitude: 69 m<br>Durée: 15 janv. 2018 08:05:37<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.60796, -7.5512786
+Altitude: 69 m
+Durée: 15 janv. 2018 08:05:37
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.551279,33.60796,69
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>18</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.59683, -7.5920815<br>Altitude: 63 m<br>Durée: 15 janv. 2018 07:52:11<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.59683, -7.5920815
+Altitude: 63 m
+Durée: 15 janv. 2018 07:52:11
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.592082,33.596828,63
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>17</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.59581, -7.593536<br>Altitude: 56 m<br>Durée: 15 janv. 2018 07:51:19<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.59581, -7.593536
+Altitude: 56 m
+Durée: 15 janv. 2018 07:51:19
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.593536,33.59581,56
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>16</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.59413, -7.5961256<br>Altitude: 65 m<br>Durée: 15 janv. 2018 07:50:01<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.59413, -7.5961256
+Altitude: 65 m
+Durée: 15 janv. 2018 07:50:01
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.596126,33.594131,65
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>15</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.58865, -7.6038537<br>Altitude: 58 m<br>Durée: 15 janv. 2018 07:46:03<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.58865, -7.6038537
+Altitude: 58 m
+Durée: 15 janv. 2018 07:46:03
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.603854,33.58865,58
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>14</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.583633, -7.6113596<br>Altitude: 67 m<br>Durée: 15 janv. 2018 07:37:05<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.583633, -7.6113596
+Altitude: 67 m
+Durée: 15 janv. 2018 07:37:05
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.61136,33.583633,67
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>13</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.58301, -7.6148396<br>Altitude: 66 m<br>Durée: 15 janv. 2018 07:35:22<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.58301, -7.6148396
+Altitude: 66 m
+Durée: 15 janv. 2018 07:35:22
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.61484,33.583012,66
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>12</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.582706, -7.617865<br>Altitude: 63 m<br>Durée: 15 janv. 2018 07:34:10<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.582706, -7.617865
+Altitude: 63 m
+Durée: 15 janv. 2018 07:34:10
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.617865,33.582706,63
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>11</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.583168, -7.6224036<br>Altitude: 56 m<br>Durée: 15 janv. 2018 07:32:20<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.583168, -7.6224036
+Altitude: 56 m
+Durée: 15 janv. 2018 07:32:20
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.622404,33.583168,56
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>10</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.583782, -7.6264453<br>Altitude: 69 m<br>Durée: 15 janv. 2018 07:30:48<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.583782, -7.6264453
+Altitude: 69 m
+Durée: 15 janv. 2018 07:30:48
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.626445,33.583782,69
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>9</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.586147, -7.6308365<br>Altitude: 77 m<br>Durée: 15 janv. 2018 07:28:41<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.586147, -7.6308365
+Altitude: 77 m
+Durée: 15 janv. 2018 07:28:41
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.630836,33.586147,77
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>8</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.58927, -7.6344824<br>Altitude: 76 m<br>Durée: 15 janv. 2018 07:26:03<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.58927, -7.6344824
+Altitude: 76 m
+Durée: 15 janv. 2018 07:26:03
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.634482,33.589272,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>7</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.590317, -7.6375794<br>Altitude: 68 m<br>Durée: 15 janv. 2018 07:23:51<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.590317, -7.6375794
+Altitude: 68 m
+Durée: 15 janv. 2018 07:23:51
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.637579,33.590317,68
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>6</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.588573, -7.6396437<br>Altitude: 76 m<br>Durée: 15 janv. 2018 07:21:43<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.588573, -7.6396437
+Altitude: 76 m
+Durée: 15 janv. 2018 07:21:43
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.639644,33.588573,76
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>5</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.585136, -7.6392856<br>Altitude: 66 m<br>Durée: 15 janv. 2018 07:20:13<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.585136, -7.6392856
+Altitude: 66 m
+Durée: 15 janv. 2018 07:20:13
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.639286,33.585136,66
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.582428, -7.6400814<br>Altitude: 71 m<br>Durée: 15 janv. 2018 07:16:46<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.582428, -7.6400814
+Altitude: 71 m
+Durée: 15 janv. 2018 07:16:46
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.640081,33.582428,71
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.580036, -7.6365585<br>Altitude: 73 m<br>Durée: 15 janv. 2018 07:15:23<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.580036, -7.6365585
+Altitude: 73 m
+Durée: 15 janv. 2018 07:15:23
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.636559,33.580036,73
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.57692, -7.636067<br>Altitude: 70 m<br>Durée: 15 janv. 2018 07:12:32<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.57692, -7.636067
+Altitude: 70 m
+Durée: 15 janv. 2018 07:12:32
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.636067,33.57692,70
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.576122, -7.638372<br>Altitude: 71 m<br>Durée: 15 janv. 2018 07:10:32<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.576122, -7.638372
+Altitude: 71 m
+Durée: 15 janv. 2018 07:10:32
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.638372,33.576122,71
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Itinéraire de Rue Georges Sand, Casablanca, Maroc à Boulevard de la Plage, Casablanca 20250, Maroc</name>
+      <Placemark>
+        <name>Itinéraire de Rue Georges Sand, Casablanca, Maroc à Boulevard de la Plage, Casablanca 20250, Maroc</name>
+        <styleUrl>#line-1267FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -7.63838,33.57615,0
+            -7.63834,33.57616,0
+            -7.63698,33.57663,0
+            -7.63622,33.57692,0
+            -7.63492,33.57736,0
+            -7.63413,33.57758,0
+            -7.63412,33.57754,0
+            -7.63412,33.57751,0
+            -7.63411,33.57749,0
+            -7.63409,33.57746,0
+            -7.63408,33.57744,0
+            -7.63406,33.57742,0
+            -7.63404,33.5774,0
+            -7.63401,33.57738,0
+            -7.63399,33.57737,0
+            -7.63395,33.57735,0
+            -7.63392,33.57734,0
+            -7.63389,33.57734,0
+            -7.63386,33.57733,0
+            -7.63383,33.57733,0
+            -7.6338,33.57734,0
+            -7.63377,33.57734,0
+            -7.63374,33.57735,0
+            -7.63371,33.57736,0
+            -7.63368,33.57737,0
+            -7.63366,33.57738,0
+            -7.63364,33.5774,0
+            -7.63361,33.57742,0
+            -7.6336,33.57744,0
+            -7.63358,33.57746,0
+            -7.63357,33.57749,0
+            -7.63356,33.57751,0
+            -7.63355,33.57754,0
+            -7.63355,33.57755,0
+            -7.63355,33.57756,0
+            -7.63355,33.57757,0
+            -7.63355,33.57759,0
+            -7.63355,33.5776,0
+            -7.63355,33.57761,0
+            -7.63355,33.57762,0
+            -7.63356,33.57764,0
+            -7.63356,33.57766,0
+            -7.63357,33.57767,0
+            -7.63358,33.57769,0
+            -7.6336,33.57771,0
+            -7.63361,33.57773,0
+            -7.63363,33.57774,0
+            -7.63365,33.57776,0
+            -7.63366,33.57777,0
+            -7.63367,33.57777,0
+            -7.63368,33.57778,0
+            -7.63369,33.57778,0
+            -7.6337,33.57779,0
+            -7.63371,33.57779,0
+            -7.63372,33.5778,0
+            -7.63373,33.5778,0
+            -7.63374,33.5778,0
+            -7.63383,33.5779,0
+            -7.63397,33.57804,0
+            -7.63418,33.57822,0
+            -7.63438,33.5784,0
+            -7.63464,33.5786,0
+            -7.6348,33.5787,0
+            -7.63503,33.57887,0
+            -7.63539,33.57915,0
+            -7.63555,33.57927,0
+            -7.63568,33.57937,0
+            -7.6357,33.57938,0
+            -7.63574,33.57941,0
+            -7.63587,33.5795,0
+            -7.63617,33.5797,0
+            -7.63622,33.57974,0
+            -7.63736,33.58054,0
+            -7.63761,33.5807,0
+            -7.63779,33.58083,0
+            -7.63808,33.58104,0
+            -7.63816,33.5811,0
+            -7.63849,33.58132,0
+            -7.63876,33.58151,0
+            -7.63883,33.58156,0
+            -7.63908,33.58174,0
+            -7.63944,33.58196,0
+            -7.64051,33.58264,0
+            -7.64063,33.58272,0
+            -7.64084,33.58284,0
+            -7.64075,33.58304,0
+            -7.64048,33.58331,0
+            -7.64042,33.58337,0
+            -7.63992,33.58399,0
+            -7.63991,33.58403,0
+            -7.63974,33.58433,0
+            -7.63956,33.5847,0
+            -7.63943,33.58509,0
+            -7.63931,33.58552,0
+            -7.63925,33.58592,0
+            -7.63934,33.58688,0
+            -7.63935,33.58697,0
+            -7.63941,33.58736,0
+            -7.63952,33.58782,0
+            -7.63965,33.58823,0
+            -7.63986,33.58876,0
+            -7.64013,33.58936,0
+            -7.63964,33.58952,0
+            -7.63954,33.58956,0
+            -7.63858,33.58991,0
+            -7.63791,33.59019,0
+            -7.63767,33.5903,0
+            -7.63741,33.59043,0
+            -7.63655,33.59076,0
+            -7.63613,33.59095,0
+            -7.63612,33.59094,0
+            -7.63611,33.59093,0
+            -7.6361,33.59092,0
+            -7.63609,33.59091,0
+            -7.63608,33.59091,0
+            -7.63607,33.5909,0
+            -7.63606,33.5909,0
+            -7.63605,33.5909,0
+            -7.63604,33.59089,0
+            -7.63603,33.59089,0
+            -7.63602,33.59089,0
+            -7.63601,33.59089,0
+            -7.636,33.59089,0
+            -7.63599,33.59089,0
+            -7.63598,33.59089,0
+            -7.63597,33.59089,0
+            -7.63597,33.5909,0
+            -7.63596,33.5909,0
+            -7.63595,33.5909,0
+            -7.63594,33.5909,0
+            -7.63585,33.59073,0
+            -7.63534,33.59021,0
+            -7.63524,33.59011,0
+            -7.63508,33.58994,0
+            -7.63464,33.58947,0
+            -7.63433,33.58915,0
+            -7.63397,33.5888,0
+            -7.6337,33.58853,0
+            -7.63333,33.58815,0
+            -7.63291,33.58773,0
+            -7.63231,33.58721,0
+            -7.63228,33.58719,0
+            -7.63209,33.58705,0
+            -7.63189,33.58691,0
+            -7.63149,33.58667,0
+            -7.63116,33.58647,0
+            -7.63091,33.58632,0
+            -7.63009,33.5858,0
+            -7.62989,33.58568,0
+            -7.62968,33.58558,0
+            -7.62966,33.58557,0
+            -7.62955,33.58551,0
+            -7.62925,33.58536,0
+            -7.62851,33.58491,0
+            -7.62793,33.58453,0
+            -7.62779,33.58444,0
+            -7.62748,33.58423,0
+            -7.62734,33.58414,0
+            -7.62711,33.58409,0
+            -7.62661,33.5839,0
+            -7.62623,33.58383,0
+            -7.62587,33.58377,0
+            -7.62533,33.58369,0
+            -7.6252,33.58367,0
+            -7.62525,33.5836,0
+            -7.62368,33.58337,0
+            -7.62359,33.58337,0
+            -7.62356,33.58337,0
+            -7.62345,33.58331,0
+            -7.62328,33.58332,0
+            -7.62316,33.5833,0
+            -7.62312,33.58329,0
+            -7.6221,33.58312,0
+            -7.62195,33.5831,0
+            -7.62163,33.58304,0
+            -7.62117,33.58297,0
+            -7.62109,33.58296,0
+            -7.62055,33.58287,0
+            -7.62045,33.58286,0
+            -7.62024,33.58282,0
+            -7.6199,33.58276,0
+            -7.61951,33.58269,0
+            -7.61913,33.58264,0
+            -7.61904,33.58263,0
+            -7.61899,33.58263,0
+            -7.61895,33.58263,0
+            -7.61864,33.58265,0
+            -7.61814,33.5827,0
+            -7.61766,33.58278,0
+            -7.61733,33.58283,0
+            -7.61677,33.58289,0
+            -7.61618,33.58293,0
+            -7.61596,33.58296,0
+            -7.61551,33.58304,0
+            -7.61531,33.58307,0
+            -7.6153,33.58305,0
+            -7.61529,33.58303,0
+            -7.61528,33.58301,0
+            -7.61526,33.583,0
+            -7.61524,33.58298,0
+            -7.61522,33.58297,0
+            -7.6152,33.58296,0
+            -7.61518,33.58295,0
+            -7.61516,33.58294,0
+            -7.61513,33.58293,0
+            -7.6151,33.58293,0
+            -7.61508,33.58293,0
+            -7.61504,33.58293,0
+            -7.61502,33.58293,0
+            -7.615,33.58293,0
+            -7.61498,33.58293,0
+            -7.61496,33.58294,0
+            -7.61493,33.58295,0
+            -7.61491,33.58295,0
+            -7.61489,33.58296,0
+            -7.61487,33.58299,0
+            -7.61486,33.58301,0
+            -7.61485,33.58303,0
+            -7.61484,33.58305,0
+            -7.61483,33.58307,0
+            -7.61483,33.5831,0
+            -7.61483,33.58312,0
+            -7.61483,33.58314,0
+            -7.61483,33.58317,0
+            -7.61362,33.58336,0
+            -7.61351,33.58337,0
+            -7.6129,33.58346,0
+            -7.61286,33.58346,0
+            -7.61278,33.58348,0
+            -7.6127,33.58355,0
+            -7.6115,33.58368,0
+            -7.61141,33.58369,0
+            -7.61057,33.58382,0
+            -7.61026,33.58387,0
+            -7.61002,33.58392,0
+            -7.6098,33.58398,0
+            -7.60961,33.58404,0
+            -7.6095,33.58408,0
+            -7.60847,33.58446,0
+            -7.60743,33.58484,0
+            -7.60727,33.58483,0
+            -7.60698,33.58494,0
+            -7.60653,33.58513,0
+            -7.60642,33.58519,0
+            -7.60626,33.58525,0
+            -7.60615,33.58532,0
+            -7.60607,33.58544,0
+            -7.60572,33.58587,0
+            -7.60545,33.58623,0
+            -7.6053,33.58642,0
+            -7.60418,33.58787,0
+            -7.604,33.58813,0
+            -7.60399,33.58813,0
+            -7.60399,33.58814,0
+            -7.60398,33.58814,0
+            -7.60397,33.58814,0
+            -7.60396,33.58814,0
+            -7.60395,33.58815,0
+            -7.60394,33.58815,0
+            -7.60394,33.58816,0
+            -7.60393,33.58816,0
+            -7.60392,33.58817,0
+            -7.60391,33.58817,0
+            -7.60391,33.58818,0
+            -7.6039,33.58818,0
+            -7.6039,33.58819,0
+            -7.6039,33.5882,0
+            -7.60389,33.5882,0
+            -7.60389,33.58821,0
+            -7.60389,33.58822,0
+            -7.60388,33.58823,0
+            -7.60388,33.58824,0
+            -7.60388,33.58825,0
+            -7.60388,33.58826,0
+            -7.60389,33.58826,0
+            -7.60389,33.58827,0
+            -7.60389,33.58828,0
+            -7.6039,33.58829,0
+            -7.6039,33.5883,0
+            -7.60391,33.58831,0
+            -7.60392,33.58831,0
+            -7.60392,33.58832,0
+            -7.60393,33.58832,0
+            -7.60392,33.58834,0
+            -7.60386,33.58875,0
+            -7.60383,33.58905,0
+            -7.60372,33.58982,0
+            -7.6037,33.58993,0
+            -7.60368,33.58998,0
+            -7.60367,33.58999,0
+            -7.60366,33.58999,0
+            -7.60365,33.59,0
+            -7.60364,33.59,0
+            -7.60363,33.59001,0
+            -7.60362,33.59001,0
+            -7.60362,33.59002,0
+            -7.60361,33.59002,0
+            -7.6036,33.59003,0
+            -7.60359,33.59004,0
+            -7.60358,33.59005,0
+            -7.60357,33.59006,0
+            -7.60357,33.59007,0
+            -7.60356,33.59008,0
+            -7.60355,33.5901,0
+            -7.60354,33.59011,0
+            -7.60354,33.59012,0
+            -7.60354,33.59013,0
+            -7.60353,33.59014,0
+            -7.60353,33.59015,0
+            -7.60353,33.59016,0
+            -7.60353,33.59017,0
+            -7.60353,33.59018,0
+            -7.60353,33.59019,0
+            -7.60354,33.5902,0
+            -7.60354,33.59021,0
+            -7.60325,33.59038,0
+            -7.60307,33.59047,0
+            -7.60272,33.59066,0
+            -7.60256,33.59074,0
+            -7.60162,33.59118,0
+            -7.60142,33.59128,0
+            -7.60051,33.59174,0
+            -7.59981,33.59208,0
+            -7.59855,33.59271,0
+            -7.5983,33.59285,0
+            -7.59802,33.59301,0
+            -7.59788,33.59301,0
+            -7.59785,33.59301,0
+            -7.59774,33.59301,0
+            -7.59764,33.59302,0
+            -7.59757,33.59302,0
+            -7.59753,33.59302,0
+            -7.59751,33.59302,0
+            -7.59749,33.59303,0
+            -7.59748,33.59303,0
+            -7.59746,33.59303,0
+            -7.59744,33.59304,0
+            -7.59742,33.59304,0
+            -7.59741,33.59305,0
+            -7.59739,33.59306,0
+            -7.59737,33.59307,0
+            -7.59736,33.59307,0
+            -7.59735,33.59308,0
+            -7.59733,33.59309,0
+            -7.59732,33.59311,0
+            -7.59731,33.59312,0
+            -7.5973,33.59313,0
+            -7.59729,33.59314,0
+            -7.59729,33.59315,0
+            -7.59728,33.59316,0
+            -7.59727,33.59317,0
+            -7.59727,33.59318,0
+            -7.59727,33.59319,0
+            -7.59727,33.5932,0
+            -7.59726,33.59321,0
+            -7.59726,33.59322,0
+            -7.59726,33.59323,0
+            -7.59726,33.59324,0
+            -7.59726,33.59325,0
+            -7.59726,33.59326,0
+            -7.59726,33.59327,0
+            -7.59726,33.59328,0
+            -7.59726,33.59329,0
+            -7.59726,33.5933,0
+            -7.59727,33.59331,0
+            -7.59727,33.59332,0
+            -7.59727,33.59333,0
+            -7.59727,33.59334,0
+            -7.5964,33.59395,0
+            -7.59612,33.59413,0
+            -7.59582,33.59433,0
+            -7.5947,33.59509,0
+            -7.59465,33.59513,0
+            -7.59357,33.59582,0
+            -7.59346,33.5959,0
+            -7.59288,33.59631,0
+            -7.5926,33.59651,0
+            -7.59225,33.59675,0
+            -7.59174,33.59708,0
+            -7.59172,33.59709,0
+            -7.59153,33.59722,0
+            -7.59152,33.59722,0
+            -7.59151,33.59722,0
+            -7.5915,33.59722,0
+            -7.59149,33.59722,0
+            -7.59148,33.59721,0
+            -7.59147,33.59721,0
+            -7.59147,33.59722,0
+            -7.59146,33.59722,0
+            -7.59145,33.59722,0
+            -7.59144,33.59722,0
+            -7.59143,33.59722,0
+            -7.59142,33.59722,0
+            -7.59142,33.59723,0
+            -7.59141,33.59723,0
+            -7.5914,33.59723,0
+            -7.5914,33.59724,0
+            -7.59139,33.59724,0
+            -7.59138,33.59724,0
+            -7.59138,33.59725,0
+            -7.59137,33.59725,0
+            -7.59137,33.59726,0
+            -7.59136,33.59726,0
+            -7.59136,33.59727,0
+            -7.59135,33.59727,0
+            -7.59135,33.59728,0
+            -7.59135,33.59729,0
+            -7.59134,33.59729,0
+            -7.59134,33.5973,0
+            -7.59134,33.59731,0
+            -7.59134,33.59732,0
+            -7.59133,33.59733,0
+            -7.59133,33.59734,0
+            -7.59134,33.59735,0
+            -7.59134,33.59736,0
+            -7.59134,33.59737,0
+            -7.59134,33.59738,0
+            -7.59135,33.59739,0
+            -7.59136,33.5974,0
+            -7.59136,33.59741,0
+            -7.59137,33.59741,0
+            -7.59137,33.59742,0
+            -7.59138,33.59742,0
+            -7.59138,33.59743,0
+            -7.59139,33.59743,0
+            -7.5914,33.59743,0
+            -7.5914,33.59744,0
+            -7.59141,33.59744,0
+            -7.59142,33.59744,0
+            -7.59143,33.59745,0
+            -7.59144,33.59745,0
+            -7.59145,33.59745,0
+            -7.59146,33.59745,0
+            -7.59147,33.59746,0
+            -7.59136,33.59776,0
+            -7.5911,33.59883,0
+            -7.59111,33.59894,0
+            -7.59053,33.59923,0
+            -7.58971,33.59963,0
+            -7.58893,33.59995,0
+            -7.58888,33.59997,0
+            -7.58792,33.60036,0
+            -7.58699,33.60077,0
+            -7.58676,33.60085,0
+            -7.58642,33.60099,0
+            -7.5864,33.601,0
+            -7.58603,33.60115,0
+            -7.58585,33.60122,0
+            -7.58507,33.60156,0
+            -7.58356,33.60218,0
+            -7.58354,33.60219,0
+            -7.58315,33.60235,0
+            -7.58208,33.60277,0
+            -7.58141,33.60304,0
+            -7.58071,33.60334,0
+            -7.57989,33.60369,0
+            -7.5797,33.60379,0
+            -7.57964,33.6038,0
+            -7.5794,33.60391,0
+            -7.57928,33.60396,0
+            -7.57902,33.60407,0
+            -7.57864,33.60421,0
+            -7.577,33.60489,0
+            -7.57577,33.60541,0
+            -7.57513,33.60567,0
+            -7.57503,33.60571,0
+            -7.57472,33.60584,0
+            -7.57428,33.60601,0
+            -7.57189,33.60699,0
+            -7.57067,33.60749,0
+            -7.57017,33.6077,0
+            -7.56969,33.6079,0
+            -7.56955,33.60801,0
+            -7.56769,33.60878,0
+            -7.56728,33.60896,0
+            -7.5654,33.60973,0
+            -7.56513,33.60984,0
+            -7.565,33.6099,0
+            -7.56488,33.60995,0
+            -7.56473,33.61001,0
+            -7.56467,33.61003,0
+            -7.56362,33.61047,0
+            -7.56273,33.61084,0
+            -7.5619,33.61118,0
+            -7.56155,33.61133,0
+            -7.56019,33.61186,0
+            -7.56007,33.61192,0
+            -7.56001,33.61195,0
+            -7.55925,33.61229,0
+            -7.55897,33.6124,0
+            -7.55868,33.61254,0
+            -7.55849,33.61262,0
+            -7.55809,33.61282,0
+            -7.55705,33.61337,0
+            -7.5568,33.61351,0
+            -7.55642,33.61371,0
+            -7.55563,33.6141,0
+            -7.55474,33.6146,0
+            -7.55452,33.61471,0
+            -7.55438,33.61477,0
+            -7.5543,33.6148,0
+            -7.5542,33.61484,0
+            -7.55408,33.61488,0
+            -7.55388,33.61496,0
+            -7.55386,33.61497,0
+            -7.55375,33.61501,0
+            -7.55354,33.61509,0
+            -7.55255,33.61545,0
+            -7.55243,33.61549,0
+            -7.55235,33.61552,0
+            -7.55231,33.61545,0
+            -7.55228,33.61542,0
+            -7.55226,33.6154,0
+            -7.55208,33.61527,0
+            -7.55206,33.61525,0
+            -7.55204,33.61522,0
+            -7.552,33.61517,0
+            -7.55181,33.61484,0
+            -7.5511,33.61356,0
+            -7.55074,33.61286,0
+            -7.55062,33.61267,0
+            -7.55039,33.61228,0
+            -7.54973,33.6111,0
+            -7.54973,33.61109,0
+            -7.54967,33.61098,0
+            -7.54898,33.60968,0
+            -7.549,33.60967,0
+            -7.55121,33.60875,0
+            -7.55141,33.60866,0
+            -7.5507,33.60604,0
+            -7.55034,33.60625,0
+            -7.55009,33.60639,0
+            -7.54963,33.60666,0
+            -7.5496,33.60667,0
+            -7.54913,33.60693,0
+            -7.5483,33.60739,0
+            -7.54805,33.60753,0
+            -7.54799,33.60757,0
+            -7.54791,33.60762,0
+            -7.54783,33.60767,0
+            -7.54775,33.60771,0
+            -7.54756,33.60781,0
+            -7.54744,33.60786,0
+            -7.54723,33.60795,0
+            -7.54665,33.60824,0
+            -7.54644,33.60834,0
+            -7.54528,33.6088,0
+            -7.54328,33.60954,0
+            -7.54303,33.60965,0
+            -7.54293,33.60969,0
+            -7.54251,33.60985,0
+            -7.54232,33.60988,0
+            -7.54222,33.60994,0
+            -7.54059,33.61075,0
+            -7.54051,33.6108,0
+            -7.54043,33.61084,0
+            -7.5404,33.61094,0
+            -7.53899,33.61162,0
+            -7.53863,33.61107,0
+            -7.53827,33.61055,0
+            -7.53818,33.61042,0
+            -7.5379,33.61001,0
+            -7.53699,33.60865,0
+            -7.53694,33.60858,0
+            -7.53678,33.60834,0
+            -7.53668,33.60819,0
+            -7.53638,33.60774,0
+            -7.53631,33.60764,0
+            -7.53585,33.60788,0
+            -7.53571,33.60796,0
+            -7.53529,33.60819,0
+            -7.53516,33.60826,0
+            -7.53481,33.60847,0
+            -7.53484,33.60852,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Rue Georges Sand, Casablanca, Maroc</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -7.638382,33.576149,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Boulevard de la Plage, Casablanca 20250, Maroc</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -7.534841,33.608519,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Circuit 01- ALPHONSE DAUDET</name>
+      <Placemark>
+        <name>18</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.60796, -7.5512786<br>Altitude: 69 m<br>Durée: 15 janv. 2018 08:05:37<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.60796, -7.5512786
+Altitude: 69 m
+Durée: 15 janv. 2018 08:05:37
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.551279,33.60796,69
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>18</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.59683, -7.5920815<br>Altitude: 63 m<br>Durée: 15 janv. 2018 07:52:11<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.59683, -7.5920815
+Altitude: 63 m
+Durée: 15 janv. 2018 07:52:11
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.592082,33.596828,63
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>17</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.59581, -7.593536<br>Altitude: 56 m<br>Durée: 15 janv. 2018 07:51:19<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.59581, -7.593536
+Altitude: 56 m
+Durée: 15 janv. 2018 07:51:19
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.593536,33.59581,56
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>16</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.59413, -7.5961256<br>Altitude: 65 m<br>Durée: 15 janv. 2018 07:50:01<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.59413, -7.5961256
+Altitude: 65 m
+Durée: 15 janv. 2018 07:50:01
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.596126,33.594131,65
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>15</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.58865, -7.6038537<br>Altitude: 58 m<br>Durée: 15 janv. 2018 07:46:03<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.58865, -7.6038537
+Altitude: 58 m
+Durée: 15 janv. 2018 07:46:03
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.603854,33.58865,58
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>14</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.583633, -7.6113596<br>Altitude: 67 m<br>Durée: 15 janv. 2018 07:37:05<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.583633, -7.6113596
+Altitude: 67 m
+Durée: 15 janv. 2018 07:37:05
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.61136,33.583633,67
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>13</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.58301, -7.6148396<br>Altitude: 66 m<br>Durée: 15 janv. 2018 07:35:22<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.58301, -7.6148396
+Altitude: 66 m
+Durée: 15 janv. 2018 07:35:22
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.61484,33.583012,66
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>12</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.582706, -7.617865<br>Altitude: 63 m<br>Durée: 15 janv. 2018 07:34:10<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.582706, -7.617865
+Altitude: 63 m
+Durée: 15 janv. 2018 07:34:10
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.617865,33.582706,63
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>11</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.583168, -7.6224036<br>Altitude: 56 m<br>Durée: 15 janv. 2018 07:32:20<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.583168, -7.6224036
+Altitude: 56 m
+Durée: 15 janv. 2018 07:32:20
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.622404,33.583168,56
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>10</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.583782, -7.6264453<br>Altitude: 69 m<br>Durée: 15 janv. 2018 07:30:48<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.583782, -7.6264453
+Altitude: 69 m
+Durée: 15 janv. 2018 07:30:48
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.626445,33.583782,69
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>9</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.586147, -7.6308365<br>Altitude: 77 m<br>Durée: 15 janv. 2018 07:28:41<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.586147, -7.6308365
+Altitude: 77 m
+Durée: 15 janv. 2018 07:28:41
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.630836,33.586147,77
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>8</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.58927, -7.6344824<br>Altitude: 76 m<br>Durée: 15 janv. 2018 07:26:03<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.58927, -7.6344824
+Altitude: 76 m
+Durée: 15 janv. 2018 07:26:03
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.634482,33.589272,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>7</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.590317, -7.6375794<br>Altitude: 68 m<br>Durée: 15 janv. 2018 07:23:51<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.590317, -7.6375794
+Altitude: 68 m
+Durée: 15 janv. 2018 07:23:51
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.637579,33.590317,68
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>6</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.588573, -7.6396437<br>Altitude: 76 m<br>Durée: 15 janv. 2018 07:21:43<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.588573, -7.6396437
+Altitude: 76 m
+Durée: 15 janv. 2018 07:21:43
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.639644,33.588573,76
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>5</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.585136, -7.6392856<br>Altitude: 66 m<br>Durée: 15 janv. 2018 07:20:13<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.585136, -7.6392856
+Altitude: 66 m
+Durée: 15 janv. 2018 07:20:13
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.639286,33.585136,66
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.582428, -7.6400814<br>Altitude: 71 m<br>Durée: 15 janv. 2018 07:16:46<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.582428, -7.6400814
+Altitude: 71 m
+Durée: 15 janv. 2018 07:16:46
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.640081,33.582428,71
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.580036, -7.6365585<br>Altitude: 73 m<br>Durée: 15 janv. 2018 07:15:23<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.580036, -7.6365585
+Altitude: 73 m
+Durée: 15 janv. 2018 07:15:23
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.636559,33.580036,73
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.57692, -7.636067<br>Altitude: 70 m<br>Durée: 15 janv. 2018 07:12:32<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.57692, -7.636067
+Altitude: 70 m
+Durée: 15 janv. 2018 07:12:32
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.636067,33.57692,70
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>1</name>
+        <description><![CDATA[description: description: description: Coordonnées: 33.576122, -7.638372<br>Altitude: 71 m<br>Durée: 15 janv. 2018 07:10:32<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity:<br>comment: <br>visited: 1<br>activity: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>description: description: Coordonnées: 33.576122, -7.638372
+Altitude: 71 m
+Durée: 15 janv. 2018 07:10:32
+comment: 
+visited: 1
+activity:
+comment: 
+visited: 1
+activity:</value>
+          </Data>
+          <Data name="comment">
+            <value/>
+          </Data>
+          <Data name="visited">
+            <value>1</value>
+          </Data>
+          <Data name="activity">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -7.638372,33.576122,71
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Itinéraire de Rue Georges Sand, Casablanca, Maroc à Boulevard de la Plage, Casablanca 20250, Maroc</name>
+      <Placemark>
+        <name>Itinéraire de Rue Georges Sand, Casablanca, Maroc à Boulevard de la Plage, Casablanca 20250, Maroc</name>
+        <styleUrl>#line-1267FF-5000-nodesc</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -7.63838,33.57615,0
+            -7.63834,33.57616,0
+            -7.63698,33.57663,0
+            -7.63622,33.57692,0
+            -7.63492,33.57736,0
+            -7.63413,33.57758,0
+            -7.63412,33.57754,0
+            -7.63412,33.57751,0
+            -7.63411,33.57749,0
+            -7.63409,33.57746,0
+            -7.63408,33.57744,0
+            -7.63406,33.57742,0
+            -7.63404,33.5774,0
+            -7.63401,33.57738,0
+            -7.63399,33.57737,0
+            -7.63395,33.57735,0
+            -7.63392,33.57734,0
+            -7.63389,33.57734,0
+            -7.63386,33.57733,0
+            -7.63383,33.57733,0
+            -7.6338,33.57734,0
+            -7.63377,33.57734,0
+            -7.63374,33.57735,0
+            -7.63371,33.57736,0
+            -7.63368,33.57737,0
+            -7.63366,33.57738,0
+            -7.63364,33.5774,0
+            -7.63361,33.57742,0
+            -7.6336,33.57744,0
+            -7.63358,33.57746,0
+            -7.63357,33.57749,0
+            -7.63356,33.57751,0
+            -7.63355,33.57754,0
+            -7.63355,33.57755,0
+            -7.63355,33.57756,0
+            -7.63355,33.57757,0
+            -7.63355,33.57759,0
+            -7.63355,33.5776,0
+            -7.63355,33.57761,0
+            -7.63355,33.57762,0
+            -7.63356,33.57764,0
+            -7.63356,33.57766,0
+            -7.63357,33.57767,0
+            -7.63358,33.57769,0
+            -7.6336,33.57771,0
+            -7.63361,33.57773,0
+            -7.63363,33.57774,0
+            -7.63365,33.57776,0
+            -7.63366,33.57777,0
+            -7.63367,33.57777,0
+            -7.63368,33.57778,0
+            -7.63369,33.57778,0
+            -7.6337,33.57779,0
+            -7.63371,33.57779,0
+            -7.63372,33.5778,0
+            -7.63373,33.5778,0
+            -7.63374,33.5778,0
+            -7.63383,33.5779,0
+            -7.63397,33.57804,0
+            -7.63418,33.57822,0
+            -7.63438,33.5784,0
+            -7.63464,33.5786,0
+            -7.6348,33.5787,0
+            -7.63503,33.57887,0
+            -7.63539,33.57915,0
+            -7.63555,33.57927,0
+            -7.63568,33.57937,0
+            -7.6357,33.57938,0
+            -7.63574,33.57941,0
+            -7.63587,33.5795,0
+            -7.63617,33.5797,0
+            -7.63622,33.57974,0
+            -7.63736,33.58054,0
+            -7.63761,33.5807,0
+            -7.63779,33.58083,0
+            -7.63808,33.58104,0
+            -7.63816,33.5811,0
+            -7.63849,33.58132,0
+            -7.63876,33.58151,0
+            -7.63883,33.58156,0
+            -7.63908,33.58174,0
+            -7.63944,33.58196,0
+            -7.64051,33.58264,0
+            -7.64063,33.58272,0
+            -7.64084,33.58284,0
+            -7.64075,33.58304,0
+            -7.64048,33.58331,0
+            -7.64042,33.58337,0
+            -7.63992,33.58399,0
+            -7.63991,33.58403,0
+            -7.63974,33.58433,0
+            -7.63956,33.5847,0
+            -7.63943,33.58509,0
+            -7.63931,33.58552,0
+            -7.63925,33.58592,0
+            -7.63934,33.58688,0
+            -7.63935,33.58697,0
+            -7.63941,33.58736,0
+            -7.63952,33.58782,0
+            -7.63965,33.58823,0
+            -7.63986,33.58876,0
+            -7.64013,33.58936,0
+            -7.63964,33.58952,0
+            -7.63954,33.58956,0
+            -7.63858,33.58991,0
+            -7.63791,33.59019,0
+            -7.63767,33.5903,0
+            -7.63741,33.59043,0
+            -7.63655,33.59076,0
+            -7.63613,33.59095,0
+            -7.63612,33.59094,0
+            -7.63611,33.59093,0
+            -7.6361,33.59092,0
+            -7.63609,33.59091,0
+            -7.63608,33.59091,0
+            -7.63607,33.5909,0
+            -7.63606,33.5909,0
+            -7.63605,33.5909,0
+            -7.63604,33.59089,0
+            -7.63603,33.59089,0
+            -7.63602,33.59089,0
+            -7.63601,33.59089,0
+            -7.636,33.59089,0
+            -7.63599,33.59089,0
+            -7.63598,33.59089,0
+            -7.63597,33.59089,0
+            -7.63597,33.5909,0
+            -7.63596,33.5909,0
+            -7.63595,33.5909,0
+            -7.63594,33.5909,0
+            -7.63585,33.59073,0
+            -7.63534,33.59021,0
+            -7.63524,33.59011,0
+            -7.63508,33.58994,0
+            -7.63464,33.58947,0
+            -7.63433,33.58915,0
+            -7.63397,33.5888,0
+            -7.6337,33.58853,0
+            -7.63333,33.58815,0
+            -7.63291,33.58773,0
+            -7.63231,33.58721,0
+            -7.63228,33.58719,0
+            -7.63209,33.58705,0
+            -7.63189,33.58691,0
+            -7.63149,33.58667,0
+            -7.63116,33.58647,0
+            -7.63091,33.58632,0
+            -7.63009,33.5858,0
+            -7.62989,33.58568,0
+            -7.62968,33.58558,0
+            -7.62966,33.58557,0
+            -7.62955,33.58551,0
+            -7.62925,33.58536,0
+            -7.62851,33.58491,0
+            -7.62793,33.58453,0
+            -7.62779,33.58444,0
+            -7.62748,33.58423,0
+            -7.62734,33.58414,0
+            -7.62711,33.58409,0
+            -7.62661,33.5839,0
+            -7.62623,33.58383,0
+            -7.62587,33.58377,0
+            -7.62533,33.58369,0
+            -7.6252,33.58367,0
+            -7.62525,33.5836,0
+            -7.62368,33.58337,0
+            -7.62359,33.58337,0
+            -7.62356,33.58337,0
+            -7.62345,33.58331,0
+            -7.62328,33.58332,0
+            -7.62316,33.5833,0
+            -7.62312,33.58329,0
+            -7.6221,33.58312,0
+            -7.62195,33.5831,0
+            -7.62163,33.58304,0
+            -7.62117,33.58297,0
+            -7.62109,33.58296,0
+            -7.62055,33.58287,0
+            -7.62045,33.58286,0
+            -7.62024,33.58282,0
+            -7.6199,33.58276,0
+            -7.61951,33.58269,0
+            -7.61913,33.58264,0
+            -7.61904,33.58263,0
+            -7.61899,33.58263,0
+            -7.61895,33.58263,0
+            -7.61864,33.58265,0
+            -7.61814,33.5827,0
+            -7.61766,33.58278,0
+            -7.61733,33.58283,0
+            -7.61677,33.58289,0
+            -7.61618,33.58293,0
+            -7.61596,33.58296,0
+            -7.61551,33.58304,0
+            -7.61531,33.58307,0
+            -7.6153,33.58305,0
+            -7.61529,33.58303,0
+            -7.61528,33.58301,0
+            -7.61526,33.583,0
+            -7.61524,33.58298,0
+            -7.61522,33.58297,0
+            -7.6152,33.58296,0
+            -7.61518,33.58295,0
+            -7.61516,33.58294,0
+            -7.61513,33.58293,0
+            -7.6151,33.58293,0
+            -7.61508,33.58293,0
+            -7.61504,33.58293,0
+            -7.61502,33.58293,0
+            -7.615,33.58293,0
+            -7.61498,33.58293,0
+            -7.61496,33.58294,0
+            -7.61493,33.58295,0
+            -7.61491,33.58295,0
+            -7.61489,33.58296,0
+            -7.61487,33.58299,0
+            -7.61486,33.58301,0
+            -7.61485,33.58303,0
+            -7.61484,33.58305,0
+            -7.61483,33.58307,0
+            -7.61483,33.5831,0
+            -7.61483,33.58312,0
+            -7.61483,33.58314,0
+            -7.61483,33.58317,0
+            -7.61362,33.58336,0
+            -7.61351,33.58337,0
+            -7.6129,33.58346,0
+            -7.61286,33.58346,0
+            -7.61278,33.58348,0
+            -7.6127,33.58355,0
+            -7.6115,33.58368,0
+            -7.61141,33.58369,0
+            -7.61057,33.58382,0
+            -7.61026,33.58387,0
+            -7.61002,33.58392,0
+            -7.6098,33.58398,0
+            -7.60961,33.58404,0
+            -7.6095,33.58408,0
+            -7.60847,33.58446,0
+            -7.60743,33.58484,0
+            -7.60727,33.58483,0
+            -7.60698,33.58494,0
+            -7.60653,33.58513,0
+            -7.60642,33.58519,0
+            -7.60626,33.58525,0
+            -7.60615,33.58532,0
+            -7.60607,33.58544,0
+            -7.60572,33.58587,0
+            -7.60545,33.58623,0
+            -7.6053,33.58642,0
+            -7.60418,33.58787,0
+            -7.604,33.58813,0
+            -7.60399,33.58813,0
+            -7.60399,33.58814,0
+            -7.60398,33.58814,0
+            -7.60397,33.58814,0
+            -7.60396,33.58814,0
+            -7.60395,33.58815,0
+            -7.60394,33.58815,0
+            -7.60394,33.58816,0
+            -7.60393,33.58816,0
+            -7.60392,33.58817,0
+            -7.60391,33.58817,0
+            -7.60391,33.58818,0
+            -7.6039,33.58818,0
+            -7.6039,33.58819,0
+            -7.6039,33.5882,0
+            -7.60389,33.5882,0
+            -7.60389,33.58821,0
+            -7.60389,33.58822,0
+            -7.60388,33.58823,0
+            -7.60388,33.58824,0
+            -7.60388,33.58825,0
+            -7.60388,33.58826,0
+            -7.60389,33.58826,0
+            -7.60389,33.58827,0
+            -7.60389,33.58828,0
+            -7.6039,33.58829,0
+            -7.6039,33.5883,0
+            -7.60391,33.58831,0
+            -7.60392,33.58831,0
+            -7.60392,33.58832,0
+            -7.60393,33.58832,0
+            -7.60392,33.58834,0
+            -7.60386,33.58875,0
+            -7.60383,33.58905,0
+            -7.60372,33.58982,0
+            -7.6037,33.58993,0
+            -7.60368,33.58998,0
+            -7.60367,33.58999,0
+            -7.60366,33.58999,0
+            -7.60365,33.59,0
+            -7.60364,33.59,0
+            -7.60363,33.59001,0
+            -7.60362,33.59001,0
+            -7.60362,33.59002,0
+            -7.60361,33.59002,0
+            -7.6036,33.59003,0
+            -7.60359,33.59004,0
+            -7.60358,33.59005,0
+            -7.60357,33.59006,0
+            -7.60357,33.59007,0
+            -7.60356,33.59008,0
+            -7.60355,33.5901,0
+            -7.60354,33.59011,0
+            -7.60354,33.59012,0
+            -7.60354,33.59013,0
+            -7.60353,33.59014,0
+            -7.60353,33.59015,0
+            -7.60353,33.59016,0
+            -7.60353,33.59017,0
+            -7.60353,33.59018,0
+            -7.60353,33.59019,0
+            -7.60354,33.5902,0
+            -7.60354,33.59021,0
+            -7.60325,33.59038,0
+            -7.60307,33.59047,0
+            -7.60272,33.59066,0
+            -7.60256,33.59074,0
+            -7.60162,33.59118,0
+            -7.60142,33.59128,0
+            -7.60051,33.59174,0
+            -7.59981,33.59208,0
+            -7.59855,33.59271,0
+            -7.5983,33.59285,0
+            -7.59802,33.59301,0
+            -7.59788,33.59301,0
+            -7.59785,33.59301,0
+            -7.59774,33.59301,0
+            -7.59764,33.59302,0
+            -7.59757,33.59302,0
+            -7.59753,33.59302,0
+            -7.59751,33.59302,0
+            -7.59749,33.59303,0
+            -7.59748,33.59303,0
+            -7.59746,33.59303,0
+            -7.59744,33.59304,0
+            -7.59742,33.59304,0
+            -7.59741,33.59305,0
+            -7.59739,33.59306,0
+            -7.59737,33.59307,0
+            -7.59736,33.59307,0
+            -7.59735,33.59308,0
+            -7.59733,33.59309,0
+            -7.59732,33.59311,0
+            -7.59731,33.59312,0
+            -7.5973,33.59313,0
+            -7.59729,33.59314,0
+            -7.59729,33.59315,0
+            -7.59728,33.59316,0
+            -7.59727,33.59317,0
+            -7.59727,33.59318,0
+            -7.59727,33.59319,0
+            -7.59727,33.5932,0
+            -7.59726,33.59321,0
+            -7.59726,33.59322,0
+            -7.59726,33.59323,0
+            -7.59726,33.59324,0
+            -7.59726,33.59325,0
+            -7.59726,33.59326,0
+            -7.59726,33.59327,0
+            -7.59726,33.59328,0
+            -7.59726,33.59329,0
+            -7.59726,33.5933,0
+            -7.59727,33.59331,0
+            -7.59727,33.59332,0
+            -7.59727,33.59333,0
+            -7.59727,33.59334,0
+            -7.5964,33.59395,0
+            -7.59612,33.59413,0
+            -7.59582,33.59433,0
+            -7.5947,33.59509,0
+            -7.59465,33.59513,0
+            -7.59357,33.59582,0
+            -7.59346,33.5959,0
+            -7.59288,33.59631,0
+            -7.5926,33.59651,0
+            -7.59225,33.59675,0
+            -7.59174,33.59708,0
+            -7.59172,33.59709,0
+            -7.59153,33.59722,0
+            -7.59152,33.59722,0
+            -7.59151,33.59722,0
+            -7.5915,33.59722,0
+            -7.59149,33.59722,0
+            -7.59148,33.59721,0
+            -7.59147,33.59721,0
+            -7.59147,33.59722,0
+            -7.59146,33.59722,0
+            -7.59145,33.59722,0
+            -7.59144,33.59722,0
+            -7.59143,33.59722,0
+            -7.59142,33.59722,0
+            -7.59142,33.59723,0
+            -7.59141,33.59723,0
+            -7.5914,33.59723,0
+            -7.5914,33.59724,0
+            -7.59139,33.59724,0
+            -7.59138,33.59724,0
+            -7.59138,33.59725,0
+            -7.59137,33.59725,0
+            -7.59137,33.59726,0
+            -7.59136,33.59726,0
+            -7.59136,33.59727,0
+            -7.59135,33.59727,0
+            -7.59135,33.59728,0
+            -7.59135,33.59729,0
+            -7.59134,33.59729,0
+            -7.59134,33.5973,0
+            -7.59134,33.59731,0
+            -7.59134,33.59732,0
+            -7.59133,33.59733,0
+            -7.59133,33.59734,0
+            -7.59134,33.59735,0
+            -7.59134,33.59736,0
+            -7.59134,33.59737,0
+            -7.59134,33.59738,0
+            -7.59135,33.59739,0
+            -7.59136,33.5974,0
+            -7.59136,33.59741,0
+            -7.59137,33.59741,0
+            -7.59137,33.59742,0
+            -7.59138,33.59742,0
+            -7.59138,33.59743,0
+            -7.59139,33.59743,0
+            -7.5914,33.59743,0
+            -7.5914,33.59744,0
+            -7.59141,33.59744,0
+            -7.59142,33.59744,0
+            -7.59143,33.59745,0
+            -7.59144,33.59745,0
+            -7.59145,33.59745,0
+            -7.59146,33.59745,0
+            -7.59147,33.59746,0
+            -7.59136,33.59776,0
+            -7.5911,33.59883,0
+            -7.59111,33.59894,0
+            -7.59053,33.59923,0
+            -7.58971,33.59963,0
+            -7.58893,33.59995,0
+            -7.58888,33.59997,0
+            -7.58792,33.60036,0
+            -7.58699,33.60077,0
+            -7.58676,33.60085,0
+            -7.58642,33.60099,0
+            -7.5864,33.601,0
+            -7.58603,33.60115,0
+            -7.58585,33.60122,0
+            -7.58507,33.60156,0
+            -7.58356,33.60218,0
+            -7.58354,33.60219,0
+            -7.58315,33.60235,0
+            -7.58208,33.60277,0
+            -7.58141,33.60304,0
+            -7.58071,33.60334,0
+            -7.57989,33.60369,0
+            -7.5797,33.60379,0
+            -7.57964,33.6038,0
+            -7.5794,33.60391,0
+            -7.57928,33.60396,0
+            -7.57902,33.60407,0
+            -7.57864,33.60421,0
+            -7.577,33.60489,0
+            -7.57577,33.60541,0
+            -7.57513,33.60567,0
+            -7.57503,33.60571,0
+            -7.57472,33.60584,0
+            -7.57428,33.60601,0
+            -7.57189,33.60699,0
+            -7.57067,33.60749,0
+            -7.57017,33.6077,0
+            -7.56969,33.6079,0
+            -7.56955,33.60801,0
+            -7.56769,33.60878,0
+            -7.56728,33.60896,0
+            -7.5654,33.60973,0
+            -7.56513,33.60984,0
+            -7.565,33.6099,0
+            -7.56488,33.60995,0
+            -7.56473,33.61001,0
+            -7.56467,33.61003,0
+            -7.56362,33.61047,0
+            -7.56273,33.61084,0
+            -7.5619,33.61118,0
+            -7.56155,33.61133,0
+            -7.56019,33.61186,0
+            -7.56007,33.61192,0
+            -7.56001,33.61195,0
+            -7.55925,33.61229,0
+            -7.55897,33.6124,0
+            -7.55868,33.61254,0
+            -7.55849,33.61262,0
+            -7.55809,33.61282,0
+            -7.55705,33.61337,0
+            -7.5568,33.61351,0
+            -7.55642,33.61371,0
+            -7.55563,33.6141,0
+            -7.55474,33.6146,0
+            -7.55452,33.61471,0
+            -7.55438,33.61477,0
+            -7.5543,33.6148,0
+            -7.5542,33.61484,0
+            -7.55408,33.61488,0
+            -7.55388,33.61496,0
+            -7.55386,33.61497,0
+            -7.55375,33.61501,0
+            -7.55354,33.61509,0
+            -7.55255,33.61545,0
+            -7.55243,33.61549,0
+            -7.55235,33.61552,0
+            -7.55231,33.61545,0
+            -7.55228,33.61542,0
+            -7.55226,33.6154,0
+            -7.55208,33.61527,0
+            -7.55206,33.61525,0
+            -7.55204,33.61522,0
+            -7.552,33.61517,0
+            -7.55181,33.61484,0
+            -7.5511,33.61356,0
+            -7.55074,33.61286,0
+            -7.55062,33.61267,0
+            -7.55039,33.61228,0
+            -7.54973,33.6111,0
+            -7.54973,33.61109,0
+            -7.54967,33.61098,0
+            -7.54898,33.60968,0
+            -7.549,33.60967,0
+            -7.55121,33.60875,0
+            -7.55141,33.60866,0
+            -7.5507,33.60604,0
+            -7.55034,33.60625,0
+            -7.55009,33.60639,0
+            -7.54963,33.60666,0
+            -7.5496,33.60667,0
+            -7.54913,33.60693,0
+            -7.5483,33.60739,0
+            -7.54805,33.60753,0
+            -7.54799,33.60757,0
+            -7.54791,33.60762,0
+            -7.54783,33.60767,0
+            -7.54775,33.60771,0
+            -7.54756,33.60781,0
+            -7.54744,33.60786,0
+            -7.54723,33.60795,0
+            -7.54665,33.60824,0
+            -7.54644,33.60834,0
+            -7.54528,33.6088,0
+            -7.54328,33.60954,0
+            -7.54303,33.60965,0
+            -7.54293,33.60969,0
+            -7.54251,33.60985,0
+            -7.54232,33.60988,0
+            -7.54222,33.60994,0
+            -7.54059,33.61075,0
+            -7.54051,33.6108,0
+            -7.54043,33.61084,0
+            -7.5404,33.61094,0
+            -7.53899,33.61162,0
+            -7.53863,33.61107,0
+            -7.53827,33.61055,0
+            -7.53818,33.61042,0
+            -7.5379,33.61001,0
+            -7.53699,33.60865,0
+            -7.53694,33.60858,0
+            -7.53678,33.60834,0
+            -7.53668,33.60819,0
+            -7.53638,33.60774,0
+            -7.53631,33.60764,0
+            -7.53585,33.60788,0
+            -7.53571,33.60796,0
+            -7.53529,33.60819,0
+            -7.53516,33.60826,0
+            -7.53481,33.60847,0
+            -7.53484,33.60852,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Rue Georges Sand, Casablanca, Maroc</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -7.638382,33.576149,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Boulevard de la Plage, Casablanca 20250, Maroc</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -7.534841,33.608519,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

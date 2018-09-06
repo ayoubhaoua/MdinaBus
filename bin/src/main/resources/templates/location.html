@@ -18,33 +18,30 @@
 	<table id="entites" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-               <th>Nom</th>
-               <th>Adresse</th>
-               <th>Type</th>
+               <th></th>
+               <th>date fin</th>
                <th></th>
             </tr>
         </thead>
         <tbody>
-       		<tr th:each="entite : ${entites}">
-				<td th:text="${entite.nom}">nom</td>
-				<td th:text="${entite.adresse}">adress</td> 
-				<td th:text="${entite.type}">type</td>
+       		<tr th:each="location : ${locations}">
+				<td th:text="${location.id}">nom</td>
+				<td th:text="${location.fin}">adress</td> 
 				<td class="center">
 				<button type="button" class="btn btn-primary buttSup" data-toggle="modal" data-target="#exampleModalCenter">
 	  			supprimer
-	  			<div class="id" th:text="${entite.id}" style="display: none"></div>
+	  			<div class="id" th:text="${location.id}" style="display: none"></div>
 				</button>
 				<button type="button" class="btn btn-primary buttEd" data-toggle="modal" data-target="#exampleModalLong">
 	  			edite
-	  			<div class="id" th:text="${entite.id}" style="display: none"></div>
-	  			<div class="nom" th:text="${entite.nom}" style="display: none"></div>
-	  			<div class="adresse" th:text="${entite.adresse}" style="display: none"></div>
-	  			<div class="type" th:text="${entite.type}" style="display: none"></div>
+	  			<div class="id" th:text="${location.id}" style="display: none"></div>
+	  			<div class="fin" th:text="${location.fin}" style="display: none"></div>
+	  			<div class="prix" th:text="${location.prix}" style="display: none"></div>
+	  			<div class="autre" th:text="${location.autre}" style="display: none"></div>
 				</button>
-				<a href="/sevices" th:href="@{'/services/'+${entite.id}}"><button type="button" class="btn btn-primary">
+				<a href="/sevices" th:href="@{'/services/'+${location.id}}"><button type="button" class="btn btn-primary">
 	  			circuits
 				</button></a>
-				
 				</td>
 			</tr>
         </tbody>
@@ -53,27 +50,30 @@
     </div>
 <script type="text/javascript">
 $(".buttSup").click(function(){
-	id=$(this).find(".id").html();
-	href="supprimer?id="+id;
+	idl=$(this).find(".id").html();
+	a=window.location.href.split("/");
+	a=a[a.length-1].split("?");
+	id=a[0];
+	href="supprimer/"+id+"?idl="+idl;
 	$("#exampleModalCenter a[type=submit]").prop("href",href);
 })
 $(".buttEd").click(function(){
 	id=$(this).find(".id").html();
-	nom=$(this).find(".nom").html();
-	adresse=$(this).find(".adresse").html();
-	type=$(this).find(".type").html();
+	fin=$(this).find(".fin").html();
+	prix=$(this).find(".prix").html();
+	autre=$(this).find(".autre").html();
 	$("#id").val(id).prop("disabled",false);
-	$("#nom").val(nom);
-	$("#adresse").val(adresse);
-	$("#type").val(type);
-	$("#exampleModalLongTitle").html("edite "+nom);
+	$("#prix").val(prix);
+	$("#fin").val(fin);
+	$("#autre").val(autre);
+	$("#exampleModalLongTitle").html("editer ");
 	$("#exampleModalLong button[type=submit]").html("save");
 })
 $("#ajouter").click(function(){
 	$("#id").prop("disabled",true);
-	$("#nom").val("");
-	$("#adresse").val("");
-	$("#type").val("ecole");
+	$("#prix").val(0.0);
+	$("#fin").val("");
+	$("#autre").val("");
 	$("#exampleModalLongTitle").html("ajouter une entite");
 	$("#exampleModalLong button[type=submit]").html("ajouter");
 })
@@ -100,7 +100,7 @@ $("#ajouter").click(function(){
   </div>
 </div>
 
-<!--   ajouter modal/delete -->
+<!--   ajouter modal/edite -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -110,15 +110,12 @@ $("#ajouter").click(function(){
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="#" th:action="@{save}" th:object="${entite}" method="post">
+      <form action="#" th:action="@{'save/'+${id_entite}}" th:object="${location}" method="post">
       <div class="modal-body">
-        <input  id="id" style="display: none" class="form-control form-control-lg" type="text" placeholder="nom" th:field="*{id}" disabled="disabled"/>
-        nom:        <input id="nom" class="form-control form-control-lg" type="text" placeholder="nom" th:field="*{nom}" />
-        adresse:    <input id="adresse" class="form-control form-control-lg" type="text" placeholder="adresse" th:field="*{adresse}" />
-        type:       <select id="type" class="form-control" th:field="*{type}">
-				      <option value="ecole">ecole</option>
-				      <option value="locataire">locataire</option>
-				    </select>
+        <input  id="id" style="display: none" type="text"  th:field="*{id}" disabled="disabled"/>
+        prix:        <input id="prix" class="form-control form-control-lg" type="text" placeholder="prix" th:field="*{prix}" />
+        fin:         <input id="fin" class="form-control form-control-lg" type="date" placeholder="date fin" th:field="*{fin}" />
+        autre:       <input id="autre" class="form-control form-control-lg" type="text" placeholder="autre" th:field="*{autre}" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
