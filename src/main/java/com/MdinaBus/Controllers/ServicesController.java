@@ -4,6 +4,7 @@ package com.MdinaBus.Controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +32,7 @@ public class ServicesController {
 	@Autowired
 	LocationRepo L_repo;
 	
-	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@GetMapping("/services/{id}")
 	
 	public String services(Model model ,@PathVariable long id, String kml) {
@@ -65,7 +66,7 @@ public class ServicesController {
 		return "Index";
 	}
 	
-	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@GetMapping("/location/{id}")
 	public String location(Model model,@PathVariable long id) {
 		model.addAttribute("locations", L_repo.findByIdentite(id));
@@ -74,7 +75,7 @@ public class ServicesController {
 		return "location";
 	}
 	
-	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@PostMapping("/location/save/{id}")
 	public String save(@PathVariable long id, Location location) {
 		location.setIdentite(id);
@@ -82,7 +83,7 @@ public class ServicesController {
 		return "redirect:../{id}";
 	}
 	
-	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@GetMapping("/location/supprimer/{id}")
 	public String location(long idl) {
 		L_repo.deleteById(idl);

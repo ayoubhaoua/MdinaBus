@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,11 +33,13 @@ public class PrincipaleController {
 	@Autowired
 	CircuitsRepo cr_repo;
 
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@GetMapping("/")
 	public String index() {
 		return"redirect:/entites";
 	}
 	
+	@Secured(value= {"ROLE_ADMIN","ROLE_E_ROULEMENT"})
 	@GetMapping("/roulement")
 	public String roulement(Model model, Long id) {
 		model.addAttribute("roulms",r_repo.findAll());
@@ -56,18 +59,21 @@ public class PrincipaleController {
 		return "roulement";
 	}
 	
+	@Secured(value= {"ROLE_ADMIN","ROLE_E_ROULEMENT"})
 	@PostMapping("/roulement/save")
 	public String saver(Roulement roul) {
 		r_repo.save(roul);
 		return "redirect:../roulement";
 	}
 	
+	@Secured(value= {"ROLE_ADMIN","ROLE_E_ROULEMENT"})
 	@GetMapping("/roulement/supprimer")
 	public String supprimerr(long idr) {
 		r_repo.deleteById(idr);
 		return "redirect:../roulement";
 	}
 	
+	@Secured(value= {"ROLE_ADMIN","ROLE_E_CONSOMMATION"})
 	@GetMapping("/consomation")
 	public String consomation(Model model, Long id) {
 		String entite="null";
@@ -84,12 +90,14 @@ public class PrincipaleController {
 		return "consomation";
 	}
 	
+	@Secured(value= {"ROLE_ADMIN","ROLE_E_CONSOMMATION"})
 	@GetMapping("/consomation/supprimer")
 	public String supprimer(long idcon) {
 		con_repo.deleteById(idcon);
 		return "redirect:../consomation";
 	}
 	
+	@Secured(value= {"ROLE_ADMIN","ROLE_E_CONSOMMATION"})
 	@PostMapping("/consomation/save")
 	public String save(Consommation_Bus consomation) {
 		con_repo.save(consomation);

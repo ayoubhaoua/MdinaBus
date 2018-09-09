@@ -10,6 +10,8 @@
 	</div>
 	<div class="page">
 		<div class="container">
+		<button type="button" class="btn btn-success" onclick="exportTableToExcel('exportTable')">Export Table Data To Excel File</button>
+		<div id="consomdiv">
 	<table id="consomation" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
@@ -54,6 +56,7 @@
 			</tr>
         </tbody>
     </table>
+    </div>
     </div>
     </div>
 <script type="text/javascript">
@@ -153,5 +156,44 @@ $(".buttSup").click(function(){
 		$("#circuit").prop("placeholder",a.innerHTML);
 	}
 </script>
+<div style="visibility:hidden;" id="exportTable"></div>
+
+<script type="text/javascript">
+document.getElementById("exportTable").innerHTML= document.getElementById("consomdiv").innerHTML;
+</script>
+
+<script>
+  function exportTableToExcel(tableID, filename = 'Consommation'){
+	 
+	 $("#exportTable th:last-child, #exportTable td:last-child").remove();
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+
+    filename = filename?filename+'.xls':'excel_data.xls';
+    
+ 
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+     
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+     
+        downloadLink.download = filename;
+        
+  
+        downloadLink.click();
+    }
+}</script>
 </body>
 </html>

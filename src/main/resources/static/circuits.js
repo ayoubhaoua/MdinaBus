@@ -27,9 +27,11 @@
                 });
 
                 map.addLayers([road, aerial, hybrid]);
-           	    map.setCenter(new OpenLayers.LonLat(-7.13,33.67), 7);
+                var center = new OpenLayers.LonLat(-7.60,33.58);
+                center.transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+                map.setCenter(center,12);
            	    
-           	 map.addControl(new OpenLayers.Control.LayerSwitcher());
+           	 //map.addControl(new OpenLayers.Control.LayerSwitcher());
              map.addControl(new OpenLayers.Control.MousePosition());
              lineLayer = new OpenLayers.Layer.Vector("Line Layer");
              drawControls = new OpenLayers.Control.DrawFeature(lineLayer,
