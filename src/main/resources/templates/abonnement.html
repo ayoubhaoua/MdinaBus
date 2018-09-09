@@ -13,9 +13,9 @@
 		<div class="container">
 		<div class="card">
            <div class="card-header">
-           
+           		<a type="button" class="btn btn-primary" th:href="@{'../location/'+${entite.id}}"> location </a>
            		<button id="ajouter" type="button" class="btn btn-primary" data-toggle="modal" data-target="#mapModal"> ajouter </button>
-           		<form th:action="@{'../savek/'+${id_service}}" enctype="multipart/form-data" method="post">
+           		<form th:action="@{'../savek/'+${entite.id}}" enctype="multipart/form-data" method="post">
            		<input type="file" name="kml" />
            		<button id="ajouter" type="submit" class="btn btn-primary"> envoyer kml </button>
            		</form>
@@ -86,7 +86,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form id="savec" action="#" th:action="@{'../savec/'+${id_service}}" th:object="${crss}" method="post">
+      <form id="savec" action="#" th:action="@{'../savec/'+${entite.id}}" th:object="${crss}" method="post">
       <div class="modal-body" th:each="cr, item: *{crs}">
       	 
         <input  th:id="${'geom'+__${item.index}__}" style="display: none"  type="text" th:field="*{crs[__${item.index}__].geometrie}"/>
@@ -115,7 +115,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form id="savec" action="#" th:action="@{'../editec/'+${id_service}}" th:object="${cr}" method="post">
+      <form id="savec" action="#" th:action="@{'../editec/'+${entite.id}}" th:object="${cr}" method="post">
       <div class="modal-body">
       
       	<input  id="id" style="display: none"  type="text" th:field="*{id}"/>

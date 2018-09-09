@@ -60,10 +60,11 @@
                     
             }
                 else{
-                	for(i=0 ; i<20 && i< kmllayer.features.length ; i++){
+                	for(i=0,j=0 ; j<20 && i< kmllayer.features.length ; i++){
                 		geom = kmllayer.features[i].geometry;
-                		idg="#geom"+i;
-                		idk="#km"+i;
+                		if(geom.components!=undefined){
+                		idg="#geom"+j;
+                		idk="#km"+j;
 
             			p="LINESTRING(";
                 		for(var key in geom.components)
@@ -73,6 +74,8 @@
                             polygone=polygone+")";
                         $(idg).val(polygone);
                        	$(idk).val(geom.getLength().toPrecision(4));
+                       	j++;
+                		}
                 	}
                 }
             }       

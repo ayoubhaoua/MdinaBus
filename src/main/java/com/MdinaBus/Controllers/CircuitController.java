@@ -39,6 +39,8 @@ public class CircuitController {
 	 @PostMapping("savec/{id}")
 	    public String save(Listecrs crss, @PathVariable long id) {
 		 for(Circuit circuit : crss.getCrs()) {
+			 if(circuit.getGeometrie().equals(""))
+				 return "redirect:../services/{id}";
 			 circuit.setidservice(id);
 			 dao.save(circuit);
 		 }

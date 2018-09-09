@@ -41,7 +41,7 @@ public class ServicesController {
 		
 		if(entite.getType().equals("ecole")) {
 		model.addAttribute("circuits", C_repo.findByIdservice(id));
-		model.addAttribute("id_service", id);
+		model.addAttribute("entite", E_repo.findById(id));
 		model.addAttribute("kml", kml);
 		if(kml==null) {
 			crs.addcircuit(new Circuit());
@@ -69,7 +69,7 @@ public class ServicesController {
 	@GetMapping("/location/{id}")
 	public String location(Model model,@PathVariable long id) {
 		model.addAttribute("locations", L_repo.findByIdentite(id));
-		model.addAttribute("id_entite", id);
+		model.addAttribute("entite", E_repo.findById(id));
 		model.addAttribute("location", new Location());
 		return "location";
 	}

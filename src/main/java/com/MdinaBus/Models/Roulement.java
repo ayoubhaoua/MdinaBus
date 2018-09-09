@@ -16,6 +16,7 @@ public class Roulement {
 	private String entite;
 	private String date;
     private double hlp;
+    private double km;
 	private String circuit;
 	private String machiniste;
 	private String accompagnatrice;
@@ -23,20 +24,37 @@ public class Roulement {
 	
 	
 	
-	
-	
-	
-	public Roulement(long id, String entite, String date, double hlp, String circuit, String machiniste,
+
+	public Roulement(long id, String entite, String date, double hlp, double km, String circuit, String machiniste,
 			String accompagnatrice, String bus) {
 		super();
 		this.id = id;
 		this.entite = entite;
 		this.date = date;
 		this.hlp = hlp;
+		this.km = km;
 		this.circuit = circuit;
 		this.machiniste = machiniste;
 		this.accompagnatrice = accompagnatrice;
 		this.bus = bus;
+	}
+
+
+
+
+
+
+	public double getKm() {
+		return km;
+	}
+
+
+
+
+
+
+	public void setKm(double km) {
+		this.km = km;
 	}
 
 
