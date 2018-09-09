@@ -17,6 +17,7 @@
             <tr>
                <th>Entite</th>
                <th>Circuit</th>
+               <th>km</th>
                <th>Hlp</th>
                <th>Date</th>
                <th>BUS</th>
@@ -29,7 +30,8 @@
        		<tr th:each="r : ${roulms}">
 				<td th:text="${r.entite}">entite</td>
 				<td th:text="${r.circuit}">circuit</td>
-				<td th:text="${r.hlp}">date</td> 
+				<td th:text="${r.km}">KM</td>
+				<td th:text="${r.hlp}">hlp</td> 
 				<td th:text="${r.date}">date</td>
 				<td th:text="${r.bus}">bus</td>
 				<td th:text="${r.machiniste}">machiniste</td>
@@ -49,7 +51,8 @@
 				<td class="center">
 				<input id="circuit" data-toggle="modal" data-target="#circuits" readonly="readonly" class="form-control " type="text" value="circuit" placeholder="circuit" th:field="*{circuit}" />
 				</td>
-				<td class="center"><input id="hlp" class="form-control " type="number" placeholder="hlp" th:field="*{hlp}" /></td>	
+				<td class="center"><input id="km" class="form-control " type="text" placeholder="km" th:field="*{km}" /></td>				
+				<td class="center"><input id="hlp" class="form-control " type="text" placeholder="hlp" th:field="*{hlp}" /></td>	
 				<td class="center"><input id="date" class="form-control " type="date" placeholder="date" th:field="*{date}" /></td>	
 				<td class="center"><input id="bus" class="form-control" type="text" placeholder="bus" th:field="*{bus}" /></td>
 				<td class="center"><input id="machiniste" class="form-control " type="text" placeholder="machiniste" th:field="*{machiniste}" /></td>
@@ -126,7 +129,11 @@ $(".buttSup").click(function(){
       </div>
       <div class="modal-body">
       <div th:each="c : ${circuits}">
-        	<a  class="btn btn-primary"  th:text="${c.nom}+'------'+${c.km_HLP}" onclick="circuit(this)" data-dismiss="modal">entite</a>
+        	<a  class="btn btn-primary" onclick="circuit(this)" data-dismiss="modal">
+        	<div th:text="${c.nom}" class="c">nom</div>
+        	<div style="display: none" class="hlp" th:text="${c.km_HLP}">hlp</div>
+        	<div style="display: none" class="km" th:text="${c.kilometrage_circuit}">km</div>        	
+        	</a>
         </div>
       </div>
       <div class="modal-footer">
@@ -161,12 +168,14 @@ document.getElementById("exportTable").innerHTML= document.getElementById("conso
 	}
 	
 	function circuit(a){
-		c=a.innerHTML.split("------")[0];
-		hlp=a.innerHTML.split("------")[1];
+		c=$(a).find(".c").html();
+		km=$(a).find(".km").html();
+		hlp=$(a).find(".hlp").html();
 		console.log(hlp);
 		$("#circuit").val(c);
 		$("#circuit").prop("placeholder",c);
 		$("#hlp").val(hlp);
+		$("#km").val(km);
 	}
 </script>
 <script>

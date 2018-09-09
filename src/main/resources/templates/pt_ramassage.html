@@ -179,17 +179,14 @@
            evt.preventDefault();
            		var geom;
             	var p="";
-            	for(i=0 ; i< kmllayer.features.length-1 ; i++){
+            	for(i=0 ; i< kmllayer.features.length ; i++){
             		geom = kmllayer.features[i].geometry; 
-            		if(geom!=null){
-            			p=p+geom.x+","+geom.y+";";
+            		if(geom!=null && geom.x!=undefined){
+            			p=p+geom.x.toPrecision(6)+","+geom.y.toPrecision(6)+";";
             		}
             		           		
             	}
-            	geom = kmllayer.features[i].geometry;
-            	if(geom!=null){
-            		p=p+geom.x+","+geom.y;
-        		}	        
+			p=p.substring(0, p.lastIndexOf(";"));
 	        $("#geomkml").val(p);
 	        $("#ModalkmlTitle").html("ajouter"+kmllayer.features.length+"point/s de ramassage");
 	        $("#Modalkml").modal();
