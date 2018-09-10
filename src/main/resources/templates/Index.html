@@ -132,10 +132,24 @@ $("#ajouter").click(function(){
   </div>
 </div>
 
+
 <script type="text/javascript">
 	$(document).ready(function() {
-    $('#entites').DataTable();
+    $('#entites').DataTable();} );
 </script>
+
+<!--  <table id="hh"  style="width:100%">
+        <thead>
+            <tr>
+               <th>Nom</th>
+            </tr>
+        </thead>
+        <tbody>
+       		<tr th:each="pt : ${PtX}">
+				<td  th:text="${pt}">nom</td>
+			</tr>
+        </tbody>
+    </table> -->
 
 
 </body>

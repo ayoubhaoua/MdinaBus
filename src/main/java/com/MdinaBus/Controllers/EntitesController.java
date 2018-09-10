@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 import com.MdinaBus.Models.Entite;
+import com.MdinaBus.Repositories.CircuitDaoImpl;
 import com.MdinaBus.Repositories.EntitesRepo;
+import com.MdinaBus.Repositories.Pt_ramassageDaoImpl;
 
 
 
@@ -27,12 +29,16 @@ public class EntitesController {
 	@Autowired
 	EntitesRepo repo;
 	
+	@Autowired
+	Pt_ramassageDaoImpl pt_dao;
+	
 	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@GetMapping("/entites")
 	public String entites(Model model) {
 		
 		model.addAttribute("entites", repo.findAll()) ;
 		model.addAttribute("entite", new Entite());
+		
 		return "Index";
 	}
 	
@@ -49,6 +55,8 @@ public class EntitesController {
 		repo.deleteById(id);
 		return "redirect:entites";
 	}
+	
+	
 
 }
 

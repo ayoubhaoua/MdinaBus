@@ -2,12 +2,14 @@ package com.MdinaBus.Repositories;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
-import org.hibernate.mapping.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -75,6 +77,30 @@ public class Pt_ramassageDaoImpl extends JdbcDaoSupport implements Pt_ramassageD
     	}
     	return geom;
     }
+    
+    
+    
+    
+    @Override
+    public Map<String, List<Double>> getXYN(long id) {
+    	
+    	     String sql = "SELECT ST_Y(pt_ramassage.geometrie) AS Y ,ST_X(pt_ramassage.geometrie) AS X ,nom FROM pt_ramassage";
+    	     Map<String, List<Double>> listX=new HashMap<String, List<Double>>();
+    	     
+    	     //List<Map> rows = getJdbcTemplate().queryForList(sql);
+    	     List<java.util.Map<String, Object>> rows = getJdbcTemplate().queryForList(sql);
+    	     for (java.util.Map<String, Object> row : rows) {
+    	    	 List<Double> list=new ArrayList<>();
+    	    	 list.add((Double) row.get("X"));
+    	    	 list.add((Double) row.get("Y"));
+    	    	 listX.put((String)row.get("nom"), (List<Double>) list);
+    	     } 
+    	     
+    	 
+    	
+    	return listX; 
+    }
+   
     
     
 }

@@ -32,6 +32,7 @@
                <th>Nom</th>
                <th>l'heure</th>
                <th></th>
+               <th></th>
             </tr>
         </thead>
         <tbody>
@@ -50,6 +51,7 @@
 	  			<div class="heure_arrivee" th:text="${point.heure_arrivee}" style="display: none"></div>
 				</button>
 				</td>
+				<td th:text="${pt}">pt</td>
 			</tr>
         </tbody>
     </table>
@@ -197,6 +199,7 @@
 /*<![CDATA[*/
     kml = /*[[${kml}]]*/ 'default';
     init();
+    add_marker(0,0);
     if(kml!=null && kml!=""){
     	kmllayer = new OpenLayers.Layer.Vector("KML", {
     		strategies: [new OpenLayers.Strategy.Fixed()],
@@ -213,6 +216,28 @@
     }
 /*]]>*/
 </script>
+<script th:inline="javascript">
+/*<![CDATA[*/
+     var LX=new Array();
+    var message = /*[[${PtXYN}]]*/ 'default';
+    
+    for (var m in message){
+    	console.log(m);
+    	//console.log(message[m]);
+   // console.log(message[m][0]);
+    LX.push(message[m][0]);
+    
+          
+    }
+
+/*]]>*/
+</script>
+
+<script type="text/javascript">
+
+
+</script>
+
 
 </body>
 </html>

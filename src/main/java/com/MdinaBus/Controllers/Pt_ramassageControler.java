@@ -65,6 +65,8 @@ public class Pt_ramassageControler {
 		model.addAttribute("circuit", c);
 		model.addAttribute("kml", kml);
 		
+		model.addAttribute("PtXYN", pt_dao.getXYN(id));
+		
 		return "pt_ramassage";
 		}
 
