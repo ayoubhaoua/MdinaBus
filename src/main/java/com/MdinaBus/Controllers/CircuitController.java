@@ -7,8 +7,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,13 +29,15 @@ public class CircuitController {
 	CircuitDaoImpl dao;
 	
 	String dir = System.getProperty("user.dir")+"/kml";
-	
+
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	 @GetMapping("supprimerc/{id}")
 		public String supprimer(long idc ,@PathVariable long id) {
 			repo.deleteById(idc);
 			return "redirect:../services/{id}";
 		}
-	 
+	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	 @PostMapping("savec/{id}")
 	    public String save(Listecrs crss, @PathVariable long id) {
 		 for(Circuit circuit : crss.getCrs()) {
@@ -46,12 +48,15 @@ public class CircuitController {
 		 }
 	        return "redirect:../services/{id}";
 	    }
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	 @PostMapping("editec/{id}")
 	    public String edite(Circuit cr, @PathVariable long id) {
 			 cr.setidservice(id);
 			 dao.edite(cr);
 	        return "redirect:../services/{id}";
 	    }
+	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	 @PostMapping("savek/{id}")
 	    public String savek(@RequestParam("kml") MultipartFile file, @PathVariable long id) {
 		 new File(dir).mkdirs();

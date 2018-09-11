@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 import java.sql.Time;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,7 +45,7 @@ public class Pt_ramassageControler {
 	
 	String dir = System.getProperty("user.dir")+"/kml";
 	
-	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@GetMapping("/point")
 	public String point(Model model) {
 		model.addAttribute("points", pt_repo.findAll());
@@ -52,7 +53,7 @@ public class Pt_ramassageControler {
 		return"pt_ramassage";
 	}
 	
-	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})	
 @GetMapping("/point/{id}")
 	
 	public String services(Model model ,@PathVariable long id, String kml ) {
@@ -64,11 +65,13 @@ public class Pt_ramassageControler {
 		model.addAttribute("circuit", c);
 		model.addAttribute("kml", kml);
 		
+		model.addAttribute("PtXYN", pt_dao.getXYN(id));
+		
 		return "pt_ramassage";
 		}
 
 
-		
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})		
 	@PostMapping("/savept/{id}")
     public String save( Pt_ramassage point , @PathVariable long id) {
 		point.setIdcircuit(id);
@@ -80,12 +83,14 @@ public class Pt_ramassageControler {
         return "redirect:../point/{id}";
     }
 	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@GetMapping("/supprimerpt/{id}")
     public String supprimer( long idp ) {
 		pt_repo.deleteById(idp);
         return "redirect:../point/{id}";
     }
 	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@PostMapping("savekml/{id}")
     public String savek(@RequestParam("kml") MultipartFile file, @PathVariable long id) {
 	 new File(dir).mkdirs();
@@ -102,6 +107,7 @@ public class Pt_ramassageControler {
         return "redirect:../point/{id}?kml="+file.getOriginalFilename();
     }
 	
+	@Secured(value= {"ROLE_ADMIN","ROLE_DESSINEUR"})
 	@PostMapping("savekmlpt/{id}")
     public String savept(@RequestParam("geom") String geom, @PathVariable long id) {
 		String[] parts = geom.split(";");

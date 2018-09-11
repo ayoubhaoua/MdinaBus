@@ -31,6 +31,7 @@
                <th>Nom</th>
                <th>l'heure</th>
                <th></th>
+               <th></th>
             </tr>
         </thead>
         <tbody>
@@ -49,12 +50,13 @@
 	  			<div class="heure_arrivee" th:text="${point.heure_arrivee}" style="display: none"></div>
 				</button>
 				</td>
+				<td th:text="${pt}">pt</td>
 			</tr>
         </tbody>
     </table>
     </div>
     <div class="col col-lg-6">
-    <div id="map"  style="width:600px; height:500px"></div>
+    <div id="map"  style="width:680px; height:500px"></div>
   
         </div>
        </div>
@@ -210,8 +212,31 @@
 		})
     	map.addLayer(kmllayer);
     }
+    add_marker(0,0);
 /*]]>*/
 </script>
+<script th:inline="javascript">
+/*<![CDATA[*/
+     var LX=new Array();
+    var message = /*[[${PtXYN}]]*/ 'default';
+    
+    for (var m in message){
+    	console.log(m);
+    	//console.log(message[m]);
+   // console.log(message[m][0]);
+    LX.push(message[m][0]);
+    
+          
+    }
+
+/*]]>*/
+</script>
+
+<script type="text/javascript">
+
+
+</script>
+
 
 </body>
 </html>
