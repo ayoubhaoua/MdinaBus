@@ -133,6 +133,13 @@ $(".buttSup").click(function(){
         	<div style="display: none" class="km" th:text="${c.kilometrage_circuit}">km</div>        	
         	</a>
         </div>
+        <div th:each="l : ${locations}">
+        	<a  class="btn btn-primary" onclick="circuit(this)" data-dismiss="modal">
+        	<div th:text="${l.nom}" class="c">nom</div>
+        	<div style="display: none" class="hlp" th:text="${l.HLP}">hlp</div>
+        	<div style="display: none" class="km" th:text="${l.kilometrage}">km</div>        	
+        	</a>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

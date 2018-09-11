@@ -11,5 +11,5 @@ import com.MdinaBus.Models.Location;
 @Repository
 public interface LocationRepo extends CrudRepository<Location, Long>{
 
-	List<Location> findByIdentite(long identite);
+	List<Location> findByIdentite(long id);
 }

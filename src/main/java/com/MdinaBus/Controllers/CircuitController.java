@@ -28,7 +28,7 @@ public class CircuitController {
 	@Autowired
 	CircuitDaoImpl dao;
 	
-	String dir = System.getProperty("user.dir")+"/src/main/resources/static/kml";
+	String dir = System.getProperty("user.dir")+"/kml";
 	
 	 @GetMapping("supprimerc/{id}")
 		public String supprimer(long idc ,@PathVariable long id) {

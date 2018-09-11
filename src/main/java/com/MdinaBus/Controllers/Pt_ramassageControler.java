@@ -42,7 +42,7 @@ public class Pt_ramassageControler {
 	@Autowired
 	CircuitDaoImpl c_dao;
 	
-	String dir = System.getProperty("user.dir")+"/src/main/resources/static/kml";
+	String dir = System.getProperty("user.dir")+"/kml";
 	
 	
 	@GetMapping("/point")

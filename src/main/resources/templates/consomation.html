@@ -122,6 +122,9 @@ $(".buttSup").click(function(){
       <div th:each="c : ${circuits}">
         	<a  class="btn btn-primary"  th:text="${c.nom}" onclick="circuit(this)" data-dismiss="modal">entite</a>
         </div>
+        <div th:each="l : ${locations}">
+        	<a  class="btn btn-primary"  th:text="${l.nom}" onclick="circuit(this)" data-dismiss="modal">entite</a>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
