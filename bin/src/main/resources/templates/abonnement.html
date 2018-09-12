@@ -13,8 +13,9 @@
 		<div class="container">
 		<div class="card">
            <div class="card-header">
+           		<a type="button" class="btn btn-primary" th:href="@{'../location/'+${entite.id}}"> location </a>
            		<button id="ajouter" type="button" class="btn btn-primary" data-toggle="modal" data-target="#mapModal"> ajouter </button>
-           		<form th:action="@{'../savek/'+${id_service}}" enctype="multipart/form-data" method="post">
+           		<form th:action="@{'../savek/'+${entite.id}}" enctype="multipart/form-data" method="post">
            		<input type="file" name="kml" />
            		<button id="ajouter" type="submit" class="btn btn-primary"> envoyer kml </button>
            		</form>
@@ -46,6 +47,7 @@
 				</button>
 				<a href="/point" th:href="@{'/point/'+${c.id}}"> 
 				<button type="button" class="btn btn-primary"> details </button></a>
+				
 				</td>
 			</tr>
         </tbody>
@@ -84,9 +86,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form id="savec" action="#" th:action="@{'../savec/'+${id_service}}" th:object="${crss}" method="post">
+      <form id="savec" action="#" th:action="@{'../savec/'+${entite.id}}" th:object="${crss}" method="post">
       <div class="modal-body" th:each="cr, item: *{crs}">
-      	
+      	 
         <input  th:id="${'geom'+__${item.index}__}" style="display: none"  type="text" th:field="*{crs[__${item.index}__].geometrie}"/>
         <input  th:id="${'km'+__${item.index}__}" style="display: none"  type="text" th:field="*{crs[__${item.index}__].kilometrage_circuit}"/>
         nom:        <input  class="form-control form-control-lg nom" type="text" placeholder="nom" th:field="*{crs[__${item.index}__].nom}" />
@@ -113,7 +115,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form id="savec" action="#" th:action="@{'../editec/'+${id_service}}" th:object="${cr}" method="post">
+      <form id="savec" action="#" th:action="@{'../editec/'+${entite.id}}" th:object="${cr}" method="post">
       <div class="modal-body">
       
       	<input  id="id" style="display: none"  type="text" th:field="*{id}"/>
@@ -130,26 +132,27 @@
   </div>
 </div>
 
- <!-- map modal -->
-<div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle"> </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
- 		<div id="map"  style="width:400px; height:400px"></div>
-      </div>
-      <div class="modal-footer">
+ 
+<!-- map Modal -->
+  <div class="modal fade" id="mapModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Map</h4>
+        </div>
+        <div class="modal-body">
+          <div id="map"  style="width:750px; height:500px"></div>
+        </div>
+        <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button id="continuer" type="button" class="btn btn-primary" data-dismiss="modal">continuer</button>
       </div>
+      </div>
     </div>
   </div>
-</div>
+
+
    
    
 <script>
@@ -203,7 +206,7 @@
     	kmllayer = new OpenLayers.Layer.Vector("KML", {
     		strategies: [new OpenLayers.Strategy.Fixed()],
 		    protocol: new OpenLayers.Protocol.HTTP({
-		        url: "../kml/"+kml,
+		        url: "../file/"+kml,
 		        format: new OpenLayers.Format.KML({
 		            extractStyles: true, 
 		            extractAttributes: true,

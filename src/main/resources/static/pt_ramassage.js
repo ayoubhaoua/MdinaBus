@@ -65,8 +65,8 @@ var apiKey = "Au2r8DSGmoBKWxlwGjGhci4nUNGzfpuPJujkqsFwEw6D1zY3rLRhA4Y8JLWUCKVe";
 
                     map.addControl(drawControls);
                     var center = new OpenLayers.LonLat(0,0);
-                   //var center = new OpenLayers.LonLat(-7.60,33.58);
-                   // center.transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+                   var center = new OpenLayers.LonLat(-7.60,33.58);
+                    center.transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
                     map.setCenter(center,12);
                     $("#ajouter").click(function() {
                         drawControls.activate();

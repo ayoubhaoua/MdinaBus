@@ -22,7 +22,6 @@
            		<input type="file" name="kml"/>
            		<button id="envoyer" type="submit" class="btn btn-primary"> envoyer kml </button>
            		</form>
-           		<button id="show" class="btn btn-primary"> show </button>
            		<button id="ajouterkml" class="btn btn-primary"> ajouter </button>
            </div>
           </div>
@@ -31,6 +30,7 @@
             <tr>
                <th>Nom</th>
                <th>l'heure</th>
+               <th></th>
                <th></th>
             </tr>
         </thead>
@@ -50,12 +50,13 @@
 	  			<div class="heure_arrivee" th:text="${point.heure_arrivee}" style="display: none"></div>
 				</button>
 				</td>
+				<td th:text="${pt}">pt</td>
 			</tr>
         </tbody>
     </table>
     </div>
     <div class="col col-lg-6">
-    <div id="map"  style="width:600px; height:500px"></div>
+    <div id="map"  style="width:680px; height:500px"></div>
   
         </div>
        </div>
@@ -179,17 +180,14 @@
            evt.preventDefault();
            		var geom;
             	var p="";
-            	for(i=0 ; i< kmllayer.features.length-1 ; i++){
+            	for(i=0 ; i< kmllayer.features.length ; i++){
             		geom = kmllayer.features[i].geometry; 
-            		if(geom!=null){
-            			p=p+geom.x+","+geom.y+";";
+            		if(geom!=null && geom.x!=undefined){
+            			p=p+geom.x.toPrecision(6)+","+geom.y.toPrecision(6)+";";
             		}
             		           		
             	}
-            	geom = kmllayer.features[i].geometry;
-            	if(geom!=null){
-            		p=p+geom.x+","+geom.y;
-        		}	        
+			p=p.substring(0, p.lastIndexOf(";"));
 	        $("#geomkml").val(p);
 	        $("#ModalkmlTitle").html("ajouter"+kmllayer.features.length+"point/s de ramassage");
 	        $("#Modalkml").modal();
@@ -204,7 +202,7 @@
     	kmllayer = new OpenLayers.Layer.Vector("KML", {
     		strategies: [new OpenLayers.Strategy.Fixed()],
 		    protocol: new OpenLayers.Protocol.HTTP({
-		        url: "../kml/"+kml,
+		        url: "../file/"+kml,
 		        format: new OpenLayers.Format.KML({
 		            extractStyles: true, 
 		            extractAttributes: true,
@@ -214,8 +212,31 @@
 		})
     	map.addLayer(kmllayer);
     }
+    add_marker(0,0);
 /*]]>*/
 </script>
+<script th:inline="javascript">
+/*<![CDATA[*/
+     var LX=new Array();
+    var message = /*[[${PtXYN}]]*/ 'default';
+    
+    for (var m in message){
+    	console.log(m);
+    	//console.log(message[m]);
+   // console.log(message[m][0]);
+    LX.push(message[m][0]);
+    
+          
+    }
+
+/*]]>*/
+</script>
+
+<script type="text/javascript">
+
+
+</script>
+
 
 </body>
 </html>
