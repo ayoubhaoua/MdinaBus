@@ -24,6 +24,7 @@ public class Pt_ramassage  {
 	@Column(columnDefinition="SERIAL")
 	private long id;
 	private String nom;
+	private String heure_deppart;
 	private String heure_arrivee;
 	private long idcircuit;
 	@Column(name="geometrie", columnDefinition="geometry")
@@ -36,13 +37,43 @@ public class Pt_ramassage  {
 
 
 
-	public Pt_ramassage(String nom, String heure_arrivee, long idcircuit, String geometrie) {
+	
+
+
+
+	public Pt_ramassage( String nom, String heure_deppart, String heure_arrivee, long idcircuit,
+			String geometrie) {
 		super();
 		this.nom = nom;
+		this.heure_deppart = heure_deppart;
 		this.heure_arrivee = heure_arrivee;
 		this.idcircuit = idcircuit;
 		this.geometrie = geometrie;
 	}
+
+
+
+
+
+
+
+	public String getHeure_deppart() {
+		return heure_deppart;
+	}
+
+
+
+
+
+
+
+	public void setHeure_deppart(String heure_deppart) {
+		this.heure_deppart = heure_deppart;
+	}
+
+
+
+
 
 
 

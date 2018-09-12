@@ -39,11 +39,12 @@ public class Pt_ramassageDaoImpl extends JdbcDaoSupport implements Pt_ramassageD
     public boolean save(Pt_ramassage pt) {
     	
     	String nom = pt.getNom();
-    	String h = pt.getHeure_arrivee();
+    	String h1 = pt.getHeure_arrivee();
+    	String h2 = pt.getHeure_deppart();
     	String geom = pt.getGeometrie();
     	long idc = pt.getIdcircuit();
         int res = jdbcTemplate.update(
-        		"INSERT INTO pt_ramassage(nom,heure_arrivee,geometrie,idcircuit) VALUES ('"+nom+"','"+h+"','"+geom+"','"+idc+"')"
+        		"INSERT INTO pt_ramassage(nom,heure_arrivee,heure_deppart,geometrie,idcircuit) VALUES ('"+nom+"','"+h1+"','"+h2+"','"+geom+"','"+idc+"')"
         		);
         if(res>0)
         	return true;
@@ -66,14 +67,13 @@ public class Pt_ramassageDaoImpl extends JdbcDaoSupport implements Pt_ramassageD
     }
     
     @Override
-    public String findGeometrieByid(long id) {
-    	String geom;
+    public List<String> findGeometrieByid(long id) {
+    	List<String> geom=new ArrayList<>();
     	try {
-    	     String sql = "SELECT ST_AsText(GEOMETRIE) FROM circuit WHERE id ='"+id+ "'";
-    	     geom= jdbcTemplate.queryForObject(sql, String.class);
+    	     String sql = "SELECT ST_AsText(GEOMETRIE) FROM pt_ramassage WHERE idcircuit ='"+id+ "'";
+    	     geom= jdbcTemplate.queryForList(sql, String.class);
     	} 
     	catch (EmptyResultDataAccessException e) {
-    	   geom="";
     	}
     	return geom;
     }
@@ -84,7 +84,7 @@ public class Pt_ramassageDaoImpl extends JdbcDaoSupport implements Pt_ramassageD
     @Override
     public Map<String, List<Double>> getXYN(long id) {
     	
-    	     String sql = "SELECT ST_Y(pt_ramassage.geometrie) AS Y ,ST_X(pt_ramassage.geometrie) AS X ,nom FROM pt_ramassage";
+    	     String sql = "SELECT ST_Y(pt_ramassage.geometrie) AS Y ,ST_X(pt_ramassage.geometrie) AS X ,nom FROM pt_ramassage WHERE idcircuit ='"+id+ "'";
     	     Map<String, List<Double>> listX=new HashMap<String, List<Double>>();
     	     
     	     //List<Map> rows = getJdbcTemplate().queryForList(sql);

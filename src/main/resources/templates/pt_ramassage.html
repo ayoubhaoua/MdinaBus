@@ -4,9 +4,9 @@
 <head th:replace="layout::site-head" />
 
 <link rel="stylesheet" href="../static/style.css" type="text/css" th:href=@{/style.css}/>
-
-<script src="../static/pt_ramassage.js" th:src="@{/pt_ramassage.js}"></script>
 <script th:src="@{/openlayers.js}"></script>
+<script src="../static/pt_ramassage.js" th:src="@{/pt_ramassage.js}"></script>
+
 
 <title>Insert title here</title>
 </head>
@@ -29,15 +29,16 @@
         <thead>
             <tr>
                <th>Nom</th>
-               <th>l'heure</th>
-               <th></th>
+               <th>heure deppart</th>
+               <th>heure arrivee</th>
                <th></th>
             </tr>
         </thead>
         <tbody>
        		<tr th:each="point : ${points}">
 				<td th:text="${point.nom}">nom</td>
-				<td th:text="${point.heure_arrivee}">l'heure</td> 
+				<td th:text="${point.heure_deppart}">heure_deppart</td>
+				<td th:text="${point.heure_arrivee}">heure_arrr</td> 
 				<td class="center">
 				<button type="button" class="btn btn-primary buttSup" data-toggle="modal" data-target="#exampleModalCenter">
 	  			supprimer
@@ -48,9 +49,9 @@
 	  			<div class="id" th:text="${point.id}" style="display: none"></div>
 	  			<div class="nom" th:text="${point.nom}" style="display: none"></div>
 	  			<div class="heure_arrivee" th:text="${point.heure_arrivee}" style="display: none"></div>
+	  			<div class="heure_deppart" th:text="${point.heure_deppart}" style="display: none"></div>
 				</button>
 				</td>
-				<td th:text="${pt}">pt</td>
 			</tr>
         </tbody>
     </table>
@@ -120,7 +121,8 @@
       	<input  id="id" style="display: none"  type="text" th:field="*{id}"/>
         <input  id="geometry" style="display: none"  type="text" th:field="*{geometrie}"/>
         nom:        <input id="nom" class="form-control form-control-lg" type="text" placeholder="nom" th:field="*{nom}" />
-        heure:      <input id="heure_arrivee" class="form-control form-control-lg" type="time" placeholder="heure_arrivee" th:field="*{heure_arrivee}" />
+        heure deppart:      <input id="heure_deppart" class="form-control form-control-lg" type="time" placeholder="heure_deppart" th:field="*{heure_deppart}" />
+        heure arrivee:      <input id="heure_arrivee" class="form-control form-control-lg" type="time" placeholder="heure_arrivee" th:field="*{heure_arrivee}" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -152,11 +154,13 @@
 	$(".buttEd").click(function(){
 		id=$(this).find(".id").html();
 		nom=$(this).find(".nom").html();
-		adresse=$(this).find(".heure_arrivee").html();
+		heure_arrivee=$(this).find(".heure_arrivee").html();
+		heure_deppart=$(this).find(".heure_deppart").html();
 		$("#id").val(id).prop("disabled",false);
 		$("#geometry").val("save");
 		$("#nom").val(nom);
 		$("#heure_arrivee").val(heure_arrivee);
+		$("#heure_deppart").val(heure_deppart);
 		$("#exampleModalLongTitle").html("edite "+nom);
 		$("#exampleModalLong button[type=submit]").html("save");
 	})
@@ -164,7 +168,8 @@
 	$("#ajouter").click(function(){
 		$("#id").prop("disabled",true);
 		$("#nom").val("");
-		$("#adresse").val("");
+		$("#heure_arrivee").val("");
+		$("#heure_deppart").val("");
 		$("#type").val("ecole");
 		$("#exampleModalLongTitle").html("ajouter un point");
 		$("#exampleModalLong button[type=submit]").html("ajouter");
@@ -211,23 +216,15 @@
 		    })
 		})
     	map.addLayer(kmllayer);
+    	add_marker(0,0);
     }
-    add_marker(0,0);
 /*]]>*/
 </script>
 <script th:inline="javascript">
 /*<![CDATA[*/
-     var LX=new Array();
     var message = /*[[${PtXYN}]]*/ 'default';
-    
-    for (var m in message){
-    	console.log(m);
-    	//console.log(message[m]);
-   // console.log(message[m][0]);
-    LX.push(message[m][0]);
-    
-          
-    }
+    console.log(message);
+    addpoints(message);
 
 /*]]>*/
 </script>

@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Time;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
@@ -59,7 +60,7 @@ public class Pt_ramassageControler {
 	public String services(Model model ,@PathVariable long id, String kml ) {
 		Circuit c = c_repo.findById(id);
 		c.setGeometrie(c_dao.findGeometrieByid(id));
-		model.addAttribute("points", pt_repo.findByIdcircuit(id));
+		model.addAttribute("points",pt_repo.findByIdcircuit(id) );
 		model.addAttribute("point", new Pt_ramassage());
 		model.addAttribute("id_circuit", id);
 		model.addAttribute("circuit", c);
@@ -111,7 +112,7 @@ public class Pt_ramassageControler {
 	@PostMapping("savekmlpt/{id}")
     public String savept(@RequestParam("geom") String geom, @PathVariable long id) {
 		String[] parts = geom.split(";");
-		Pt_ramassage pt = new Pt_ramassage("","",id,"");
+		Pt_ramassage pt = new Pt_ramassage("","","",id,"");
 		for (String part : parts) {
 			String[] coor=part.split(",");
 			pt.setGeometrie("POINT("+coor[0]+" "+coor[1]+")");
