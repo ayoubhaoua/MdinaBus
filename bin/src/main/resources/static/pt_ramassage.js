@@ -1,8 +1,19 @@
-var map, drawControls, kmllayer,markers,icon;
+var map, drawControls, kmllayer,points,icon;
+
+icon = new OpenLayers.Icon('http://maps.google.com/mapfiles/ms/micons/red.png');
+points =new OpenLayers.Layer.Vector('Points', {
+    styleMap: new OpenLayers.StyleMap({
+        pointRadius: "${type}", // based on feature.attributes.type
+        label :"${name}",
+        fontSize: "20px",
+        labelAlign: "lb",
+        fillColor: "#666666"
+    })
+});
+
 
 var apiKey = "Au2r8DSGmoBKWxlwGjGhci4nUNGzfpuPJujkqsFwEw6D1zY3rLRhA4Y8JLWUCKVe";
 
-console.log(m);
 
 
             function init(){
@@ -26,32 +37,16 @@ console.log(m);
                     name: "Bing Aerial With Labels"
                 });
                
-
+				
                 var pointLayer = new OpenLayers.Layer.Vector("Point Layer");
-                
 
                
                       
                 
+                
+                map.addLayers([road, aerial, hybrid, pointLayer,points]);
+                
                
-                var markers = new OpenLayers.Layer.Markers( "Markers" );
-                map.addLayers([road, aerial, hybrid, pointLayer,markers]);
-                var icon = new OpenLayers.Icon('http://maps.google.com/mapfiles/ms/micons/red.png');
-               /* var m=new OpenLayers.Marker(new OpenLayers.LonLat(0,0),icon);
-                
-                markers.addMarker(m);*/
-                
-                function add_marker(latitude, longitude) {
-                    var lonLat = new OpenLayers.LonLat(longitude, latitude)
-                        .transform(
-                            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-                            map.getProjectionObject() // to Spherical Mercator Projection
-                    );
-                    var point = new OpenLayers.Marker(lonLat,icon);
-                    markers.addMarker(point);
-                    map.setCenter(lonLat, 8);
-                    console.log(latitude + ", " + longitude);
-                }
                 
                 
                 //map.addControl(new OpenLayers.Control.LayerSwitcher());
@@ -62,6 +57,7 @@ console.log(m);
 
                  drawControls.events.register('featureadded', drawControls, function(evt) {
                  var geom = evt.feature.geometry;
+                 console.log(evt.feature);
                         $('#geometry').val("POINT("+geom.x+" "+geom.y+")");
                         $('#exampleModalLong').modal();
                         
@@ -69,17 +65,24 @@ console.log(m);
 
                     map.addControl(drawControls);
                     var center = new OpenLayers.LonLat(0,0);
-                   // var center = new OpenLayers.LonLat(-7.60,33.58);
+                   var center = new OpenLayers.LonLat(-7.60,33.58);
                     center.transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
                     map.setCenter(center,12);
-                    
-                    
                     $("#ajouter").click(function() {
                         drawControls.activate();
                        });
-                   
-                   add_marker(0,0); 
+                     
             }
             
+            function addpoints(pts) {
+            	var features = new Array();
+                for(m in pts){
+                	pt=new OpenLayers.Feature.Vector(
+                			new OpenLayers.Geometry.Point(pts[m][0],pts[m][1]) , { type: 5 , name: m}
+                			);
+                	features.push(pt);
+                }
+                points.addFeatures(features);
+            }
             
             

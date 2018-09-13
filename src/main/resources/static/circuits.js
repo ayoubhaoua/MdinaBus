@@ -26,7 +26,7 @@
                     name: "Bing Aerial With Labels"
                 });
 
-                map.addLayers([road, aerial, hybrid]);
+                map.addLayers([wmsLayer]);
                 var center = new OpenLayers.LonLat(-7.60,33.58);
                 center.transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
                 map.setCenter(center,12);
@@ -45,7 +45,7 @@
               
                    var polygone = p.substring(0, p.lastIndexOf(","));
                   polygone=polygone+")";
-                   var kmg= geom.getLength();
+                   var kmg= geom.getLength()*100;
                    
                  $('#geom0').val(polygone);
              	$('#km0').val(kmg.toPrecision(4));
