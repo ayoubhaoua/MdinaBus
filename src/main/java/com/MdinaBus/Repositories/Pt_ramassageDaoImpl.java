@@ -56,10 +56,11 @@ public class Pt_ramassageDaoImpl extends JdbcDaoSupport implements Pt_ramassageD
     public boolean edite(Pt_ramassage pt) {
     	long id = pt.getId();
     	String nom = pt.getNom();
-        String h = pt.getHeure_arrivee();
-        int res = jdbcTemplate.update(
-        		"UPDATE pt_ramassage SET heure_arrivee='"+h+"', nom='"+nom+"' WHERE id="+id+";"
-        		);
+    	 String h = pt.getHeure_arrivee();
+         String h1=pt.getHeure_deppart();
+         int res = jdbcTemplate.update(
+         		"UPDATE pt_ramassage SET heure_arrivee='"+h+"',heure_deppart='"+h1+"', nom='"+nom+"' WHERE id="+id+";"
+         		);
         if(res>0)
         	return true;
         

@@ -1,0 +1,75 @@
+<DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+
+<meta charset="utf-8"/>
+	
+		<link rel="stylesheet" type="text/css" href="../static/bootstrap/bootstrap.min.css" th:href=@{bootstrap/bootstrap.min.css}/>
+		
+<script src="bootstrap/jquery-3.1.1.slim.min.js" ></script>
+<script src="bootstrap/tether.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+		<style type="text/css">
+	#btLog{
+	
+	position: absolute; 
+	top: 400px; 
+	left: 100px;
+	width: 10%;
+	height: 8%;
+}
+	body{
+	background-image: url("img/MBLogin.jpg");
+	background-repeat: no-repeat;
+	background-size:  1370px 650px;
+
+}
+	</style>
+
+	
+<title>Login</title>
+</head>
+<body>
+<!-- Button trigger modal -->
+<button type="button" id="btLog" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+  Login
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login Now</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form th:action="@{/login}" method="post">
+          <div>
+             <label>User:</label>
+             <input type="text" class="form-control" name="username"/>
+          </div>
+          <div>
+             <label>password:</label>
+             <input type="password" class="form-control" name="password"/>
+          </div>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button  type="submit" value="Login" class="btn btn-primary">Submit</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  
+  
+</body>
+</html>

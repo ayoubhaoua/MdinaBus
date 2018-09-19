@@ -43,7 +43,7 @@ public class CircuitDaoImpl extends JdbcDaoSupport implements CircuitDao {
         String autre=cr.getAutre();
     	String geom = cr.getGeometrie();
         int res = jdbcTemplate.update(
-        		"INSERT INTO circuit(nom,kilometrage_circuit,km_HLP,idservice,autre,geometrie) VALUES ('"+nom+"','"+kilometrage_circuit+"','"+hlp+"','"+id_service+"','"+autre+"','"+geom+"')"
+        		"INSERT INTO circuit(nom,kilometrage_circuit,km_hlp,idservice,autre,geometrie) VALUES ('"+nom+"','"+kilometrage_circuit+"','"+hlp+"','"+id_service+"','"+autre+"','"+geom+"')"
         		);
         if(res>0)
         	return true;
@@ -56,9 +56,10 @@ public class CircuitDaoImpl extends JdbcDaoSupport implements CircuitDao {
     	long id = cr.getId();
     	String nom = cr.getNom();
         double hlp = cr.getKm_HLP();
+        double kilometrage_circuit = cr.getKilometrage_circuit();
         String autre=cr.getAutre();
         int res = jdbcTemplate.update(
-        		"UPDATE public.circuit SET autre='"+autre+"', km_hlp='"+hlp+"', nom='"+nom+"' WHERE id="+id+";"
+        		"UPDATE public.circuit SET kilometrage_circuit='"+kilometrage_circuit+"',autre='"+autre+"', km_hlp='"+hlp+"', nom='"+nom+"' WHERE id="+id+";"
         		);
         if(res>0)
         	return true;

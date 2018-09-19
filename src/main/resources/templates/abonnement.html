@@ -26,6 +26,7 @@
             <tr>
                <th>Nom</th>
                <th>kilometrage</th>
+               <th>HLP</th>
                <th></th>
             </tr>
         </thead>
@@ -33,7 +34,8 @@
        		<tr th:each="c : ${circuits}">
 				<td th:text="${c.nom}">nom</td>
 				<td th:text="${c.kilometrage_circuit}">kilometrage_circuit</td>
-				<td class="center">
+				<td th:text="${c.km_HLP}">HLP</td>
+				<td >
 				<button type="button" class="btn btn-primary buttSup" data-toggle="modal" data-target="#exampleModalCenter">
 	  			supprimer
 	  			<div class="id" th:text="${c.id}" style="display: none"></div>
@@ -43,6 +45,7 @@
 	  			<div class="id" th:text="${c.id}" style="display: none"></div>
 	  			<div class="nom" th:text="${c.nom}" style="display: none"></div>
 	  			<div class="hlp" th:text="${c.km_HLP}" style="display: none"></div>
+	  			<div class="kilometrage_circuit" th:text="${c.kilometrage_circuit}" style="display: none"></div>
 	  			<div class="autre" th:text="${c.autre}" style="display: none"></div>
 				</button>
 				<a href="/point" th:href="@{'/point/'+${c.id}}"> 
@@ -120,6 +123,7 @@
       
       	<input  id="id" style="display: none"  type="text" th:field="*{id}"/>
         nom:        <input  class="form-control form-control-lg nom" type="text" placeholder="nom" th:field="*{nom}" />
+        Kilometrage:<input  class="form-control form-control-lg kilometrage_circuit" type="text" placeholder="kilometrage_circuit" th:field="*{kilometrage_circuit}" />
         HLP:        <input  class="form-control form-control-lg hlp" type="text" placeholder="HLP" th:field="*{km_HLP}" />
         autre:      <input  class="form-control form-control-lg autre" type="text" value="" placeholder="autre" th:field="*{autre}" />
       </div>
